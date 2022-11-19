@@ -1,0 +1,5684 @@
+// full stack
+ microsoft Visual Studio 2019 0r 2022
+1. Introduction CLR
+2. C# Fundamental
+3. # oops
+4. Assembly(Namespace)
+
+5. DB (Database)(microsoft Sql Server>2014)
+6. Project(DB)
+
+7. Ado.net (connectivity)
+   c#    DB
+   Project
+8. html (UI)
+
+9. Asp.net (web appl)
+	(html/C#/DB/Ado.net)
+	project 
+10 . Asp.net MVC  (web appl)
+	(html/C#/DB/Ado.net)
+	project 
+	
+	Exper
+	
+	
+Vs 2022 6.0 	 2019 5.0   2017 3.1
+
+
+// Dotnet 
+Framework
+Microsoft
+2000
+
+
+Develop Appp
+
+ Console Appl - (CMD) c#
+ DEsktop app- exe GUI
+ Web App- (browser) Asp.net +Asp.net mvc+ Angularjs + react js
+ Mobile App- Xamrine (xaml)
+ 
+Envir.... CLR - Common Language Runtime 
+keycom
+1. MSIL (IL)
+2. JIt Complier
+3. CTS 
+4. CLS
+
+  NOtepad + Software (VS)
+  
+  notepad (vs no req)
+  1. CLR 
+  2. Sdk  (1gb ram pro- dual core ) 
+  3. size (230mb)
+  
+  open cmd(operating system)
+  
+  
+  // Class struct and variable
+  -------------------------
+  class - 2
+  -------------------------
+  // console app
+// Namespace(Progra, required)
+// class 
+// Main method (entry point
+class Filpkart
+{ // declartion block start
+  // class is a keyword// and demo is a  class name (identifietr)
+  // all keyqword are visible in blue color
+
+    // main method - Entry point
+    // modifer public private 
+    public static void Main()
+    { // main starting block
+    
+    }// end block
+
+}// end block
+___________
+
+class Filpkart
+{ 
+    public static void Main()
+    {
+// public is  a modifer 
+// static ia keyword and class also 
+// void is a return type but d't return any value
+// main is  method/entry point( but d't change name its predfine 
+    
+    }
+
+}
+____________
+
+
+class Filpkart
+{ 
+    public static void Main()
+    {
+        // public is  a modifer 
+        // static ia keyword and class also 
+        // void is a return type but d't return any value
+        // main is  method/entry point( but d't change name its predfine 
+        System.Console.WriteLine(); // ctr+.
+// systm is a namespace /. is a collection of classes
+// class is a structure of blue print
+
+// console is a class ( belong to system)
+// writeline is a method ( Display the message for console 
+// output screen ( datatye string " ")
+
+    }
+
+}
+____________
+
+
+class Filpkart
+{ 
+    public static void Main()
+    {
+        // public is  a modifer 
+        // static ia keyword and class also 
+        // void is a return type but d't return any value
+        // main is  method/entry point( but d't change name its predfine 
+        System.Console.WriteLine("Hello World"); // ctr+.
+        // build - ctr+b ( menu > build_ build app
+        // root dir- Solution explore ( go to view in menu
+        //  select Solution explore( ctr+alt+L
+
+      System.Console.ReadLine();// hold the console output screen
+        // ctr+f5  // hold the screen without type message(ReadLine)
+    }
+
+}
+___________
+using System;
+
+class Filpkart
+{
+    public static void Main()
+    {
+         // setting the ali ctr+k+d
+
+        Console.WriteLine("Hello\n World");
+        Console.Write("Welcome\n");
+        Console.Write("Hello\n");
+        Console.WriteLine("Welcome");
+    }
+
+}
+_______________
+
+using System;
+class Filpkart
+{
+    public static void Main()
+    {
+         // setting the ali ctr+k+d
+         // t mean tab providing the space 
+         // \n new line break the line
+         // both are used in double quote " " 
+        Console.WriteLine("\t\tHello World");
+        Console.Write("\t\t\t\tWelcome\n");
+        Console.Write("Hello\n");
+        Console.WriteLine("Welcome");
+    }
+
+}
+_______________
+using System;
+class Student
+{
+    public static void Main()
+    {
+// variable 
+// Email , Rollno First Name Full
+// // a variable is  name of memory allocation
+// it is used to store data
+// and it can change the value 
+ // it can be reused many times
+// it cab be identified easily 
+
+// a variable  can have aplh, Digit and Underscope
+// Amit Sumit valid
+// 09Amit  
+// _amit
+// First_Name
+// var.. name must not be any reserved keyword (if else , switch )
+// NOUN - Meaning Full - Real world
+
+
+
+
+    }
+
+}
+___________
+using System;
+class Student
+{
+    public static void Main()
+    {
+        // variable type
+
+        // Decimal Type  - Decimal
+        // boolean Type - true / false 
+        // Integral Type -  int char bytes  short long 
+        // Floating point type - float and double
+        // Nullable Types - Nullable data type
+
+        // Dataype
+        // there are declare in 3 type
+        // 1. Value Datatype
+                // predefine data type - integer, ,bool. float
+                // user define data tyoe- struc ,enum
+        // 2. Reference datatype
+                // predfine  - object and string 
+                // userde - classes and interface
+        // 3. pointer datatype  
+
+
+
+    }
+
+}
+  -------------------------
+  class - 3
+  -------------------------
+  using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        // declaration of variable
+        // datatype  var_name = var_value ;
+        // var_name - noun Camel userdefine
+        // int - size 4byte
+        // contain ony digit not include decimal value
+        // like 11233 
+        int RollNo = 21;
+        Console.WriteLine("The Roll No is ");
+        Console.WriteLine("The Roll No is "+RollNo);//concatination
+        Console.WriteLine("The Roll no is : {0}",RollNo);
+        Console.WriteLine("The {0} Roll no is :{0}", RollNo);
+
+       // Console.ReadLine(); // f5 run 
+       // ctr+f5
+
+    }
+}
+
+______
+
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+      
+        int RollNo = 21;
+        int Fee = 2200;
+        Console.WriteLine("The Roll No is ");
+        Console.WriteLine("The Roll No is "+RollNo+" Fee Amount is :"+Fee);//concatination
+Console.WriteLine("The Roll no is :{0} and Fee Amount is{1}",RollNo,Fee);
+    
+
+       
+
+    }
+}
+
+_______
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+      
+        int RollNo = 21;
+        int Fee = 2200;
+        Console.WriteLine($"Fee amt is{Fee}  and Roll is {RollNo}");
+
+        Console.WriteLine(String.Format($"Fee {Fee} Roll {RollNo}"));
+        Console.WriteLine(string.Format($"Fee {Fee} Roll {RollNo}"));
+
+
+    }
+}
+
+______
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+      
+        int RollNo = 21;
+        int Fee = 2200;
+        Console.WriteLine($"Fee amt is{Fee}  and Roll is {RollNo}");
+        Console.WriteLine(String.Format($"Fee {Fee} Roll {RollNo}"));
+        Console.WriteLine(string.Format($"Fee {Fee} Roll {RollNo}"));
+
+
+    }
+}
+
+_________
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        // float 4 byte int+decimal
+        // suffix f
+      
+        float RollNo = 2.1f;
+        float Fee = 2200;
+        Console.WriteLine($"Fee amt is{Fee}  and Roll is {RollNo}");
+        Console.WriteLine(String.Format($"Fee {Fee} Roll {RollNo}"));
+        Console.WriteLine(string.Format($"Fee {Fee} Roll {RollNo}"));
+
+
+    }
+}
+
+__________
+
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        // double 8 byte int+decimal
+        // suffix 
+      
+        double RollNo = 2.1;
+        double Fee = 2200;
+        Console.WriteLine($"Fee amt is{Fee}  and Roll is {RollNo}");
+        Console.WriteLine(String.Format($"Fee {Fee} Roll {RollNo}"));
+        Console.WriteLine(string.Format($"Fee {Fee} Roll {RollNo}"));
+
+
+    }
+}
+
+_________
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        // double 8 byte int+decimal
+        // suffix 
+      
+        double RollNo = 2.1;
+        double Fee = 2200;
+        Console.WriteLine($"Fee amt is{Fee}  and Roll is {RollNo}");
+        Console.WriteLine(String.Format($"Fee {Fee} Roll {RollNo}"));
+        Console.WriteLine(string.Format($"Fee {Fee} Roll {RollNo}"));
+
+
+    }
+}
+
+______
+
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        // decimal 16 byte int+decimal
+        // suffix  m
+      
+        char RollNo = 'C';
+        char Fee = '4';
+        Console.WriteLine($"Fee amt is{Fee}  and Roll is {RollNo}");
+        Console.WriteLine(String.Format($"Fee {Fee} Roll {RollNo}"));
+        Console.WriteLine(string.Format($"Fee {Fee} Roll {RollNo}"));
+
+
+    }
+}
+
+_________
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        // decimal 16 byte int+decimal
+        // suffix  m
+
+        string RollNo = "Hello";
+        string Fee = "Amit@gmail.com";
+        Console.WriteLine($"Fee amt is{Fee}  and Roll is {RollNo}");
+        Console.WriteLine(String.Format($"Fee {Fee} Roll {RollNo}"));
+        Console.WriteLine(string.Format($"Fee {Fee} Roll {RollNo}"));
+
+
+    }
+}
+
+__________
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        int RollNo;
+        Console.WriteLine("Enter The Roll No");
+        RollNo = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Roll is : {0}", RollNo);
+
+        decimal Amt;
+        Console.WriteLine("Enter The fee Amt");
+        Amt = Convert.ToDecimal(Console.ReadLine());
+        Console.WriteLine("Fee is : {0}", Amt);
+
+        double Ince;
+        Console.WriteLine("Enter The Inc Amt");
+        Ince = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Inc is : {0}", Ince);
+
+        char ch;
+        Console.WriteLine("Enter The Ch value");
+        ch = Convert.ToChar(Console.ReadLine());
+        Console.WriteLine("Ch is : {0}", ch);
+
+        long RollNo1;
+        Console.WriteLine("Enter The Roll No1");
+        RollNo1 = Convert.ToInt64(Console.ReadLine());
+        Console.WriteLine("Roll is : {0}", RollNo1);
+
+        string Name;
+        Console.WriteLine("Enter The USer Name");
+        Name = Console.ReadLine();
+        Console.WriteLine("Name is : {0}", Name);
+
+    }
+}
+
+_____________
+
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        double RollNo;
+        Console.WriteLine("Enter The Roll No");
+        RollNo = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Roll is : {0}", RollNo);
+        Console.WriteLine("Type of  class {0}",typeof(char));
+        Console.WriteLine("Type of  class {0}", RollNo.GetType());
+
+
+    }
+}
+  -------------------------
+  class - 4
+  -------------------------
+  
+  using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add("Car");
+            obj.Add('A');
+            obj.Add(15.25);
+
+            Console.WriteLine(obj[0]);
+            Console.WriteLine(obj[1]);
+     Console.WriteLine("Find Length "+obj.Count);
+     
+
+        }
+    }
+}
+_______
+
+using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add("Car");
+            obj.Add('A');
+            obj.Add(15.25);
+     Console.WriteLine("Find Length "+obj.Count);
+            for (int i = 0; i < obj.Count; i++)
+            {
+                Console.WriteLine(obj[i]);
+            }
+        }
+    }
+}
+_________
+
+using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add("Car");
+            obj.Add('A');
+            obj.Add(15.25);
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            foreach (object item in obj)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine();
+            foreach (dynamic item in obj)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+_____________
+
+using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add(131);
+            obj.Add(114);
+                obj.Add(154);
+            
+            obj.Sort();
+
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+       
+        }
+    }
+}
++____________
+
+using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add(131);
+            obj.Add(114);
+             obj.Add(154);
+            foreach (var item1 in obj)
+            {
+                Console.WriteLine(item1);
+            }
+            Console.WriteLine();
+            // insert element
+            obj.Insert(1, 600);
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+       
+        }
+    }
+}
+______________
+
+using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add(131);           
+            obj.Add(114);
+             obj.Add(154);
+            obj.Add(131);
+            foreach (var item1 in obj)
+            {
+                Console.WriteLine(item1);
+            }
+            Console.WriteLine();
+            // remove element value based
+            obj.Remove(131);
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+       
+        }
+    }
+}
+_____________
+
+using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add(131);           
+            obj.Add(114);
+             obj.Add(154);
+            obj.Add(131);
+            foreach (var item1 in obj)
+            {
+                Console.WriteLine(item1);
+            }
+            Console.WriteLine();
+            // remove element index based
+            obj.RemoveAt(2);
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+       
+        }
+    }
+}
+______________
+using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add(131);           
+            obj.Add(114);
+             obj.Add(154);
+            obj.Add(131);
+            obj.Add(14);
+            obj.Add(15);
+            foreach (var item1 in obj)
+            {
+                Console.WriteLine(item1);
+            }
+            Console.WriteLine();
+            // remove element index based
+            obj.RemoveRange(0,3);
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+       
+        }
+    }
+}
+_________
+using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add(131);           
+            obj.Add(114);
+             obj.Add(154);
+            obj.Add(131);
+            obj.Add(14);
+            obj.Add(15);
+            Console.WriteLine("Array Length is : " + obj.Count);
+            Console.WriteLine();
+            foreach (var item1 in obj)
+            {
+                Console.WriteLine(item1);
+            }
+            Console.WriteLine("Clear array List\n");
+            // clear all value index 
+            obj.Clear();
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("Array Length is : "+obj.Count);
+       
+        }
+    }
+}
+_______________
+
+using System;
+using System.Collections;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // group of object
+            ArrayList obj = new ArrayList();
+            obj.Add(12);
+            obj.Add(131);           
+            obj.Add(114);
+             obj.Add(154);
+            obj.Add(131);
+            obj.Add(14);
+            obj.Add(15);
+            Console.WriteLine("Array Length is : " + obj.Count);
+            Console.WriteLine();
+            foreach (var item1 in obj)
+            {
+                Console.WriteLine(item1);
+            }
+            Console.WriteLine("Clear array List\n");
+            // clear all value index 
+            obj.Clear();
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("Array Length is : "+obj.Count);
+       
+        }
+    }
+}
+_____________
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // list - store , fetch and dublicate also
+            // List<T>// type of class
+
+            var Roll = new List<int>();
+            Roll.Add(1);
+            Roll.Add(21);
+            Roll.Add(333);
+            Roll.Add(14);
+            Roll.Add(53);
+            Roll.Add(333);
+            Roll.Add(6);
+            Roll.Sort();
+            foreach (var item in Roll)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+
+        }
+    }
+}
+_______
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // HashSet - store , fetch and dublicate also
+            // List<T>// type of class
+
+            var Roll = new HashSet<int>();
+            Roll.Add(1);
+            Roll.Add(21);
+            Roll.Add(333);
+            Roll.Add(14);
+            Roll.Add(53);
+           Roll.Add(333);
+            Roll.Add(6);
+         //   Roll.Sort();
+            foreach (var item in Roll)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+
+        }
+    }
+}
+_________
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //  SortedSet - store , fetch and dublicate also
+            // List<T>// type of class
+
+            var Roll = new  SortedSet<int>();
+            Roll.Add(1);
+            Roll.Add(21);
+            Roll.Add(333);
+            Roll.Add(14);
+            Roll.Add(53);
+           Roll.Add(333);
+            Roll.Add(6);
+         //   Roll.Sort();
+            foreach (var item in Roll)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+
+        }
+    }
+}
+_________
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //  SortedSet - store , fetch and dublicate also
+            // List<T>// type of class
+
+            var Roll = new  SortedSet<double>();
+            Roll.Add(1);
+            Roll.Add(2.1);
+            Roll.Add(333);
+            Roll.Add(14);
+            Roll.Add(53);
+            Roll.Add(333);
+            Roll.Add(6);
+         //   Roll.Sort();
+            foreach (var item in Roll)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+
+        }
+    }
+}
+_________
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Stack<int> stack = new Stack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+
+            foreach (var item in stack)
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+    }
+}
+_____________
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Queue<string> obj = new Queue<string>();
+                obj.Enqueue("a");
+                   obj.Enqueue("b");
+            obj.Enqueue("c");
+            obj.Enqueue("d");
+                obj.Enqueue("e");
+            obj.Enqueue("f");
+
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+    }
+}
+_______________
+
+using System;
+
+namespace ConsoleApp11
+{
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            // operator 
+            // operator is simply a symbol is used to 
+            // perform operation like arthmetic , ath ass etc
+            // a+b   
+            // if(9>=10
+            // type of operator 
+             
+            // Binary 
+                      // Arthmetic op - +-*/%
+                     
+                      // Relational - > < >= <= == !=
+                      // Logical - && || !
+                      // Bitwise  - & | << >> ^
+                      // Assignmen - =,+=,-=,*=,/=,%=
+
+          // unaray   --    ++ --
+
+          // ternary   -  ?:
+
+
+
+
+
+        }
+    }
+}
+_________
+using System;
+
+namespace ConsoleApp11
+{
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Add in two Number");
+            //  int num;// collection of similar datatype
+            // int num1;
+            // int res;
+
+            decimal num, num1, res;
+            Console.WriteLine("Enter The First Number");
+            num=Convert.ToDecimal(Console.ReadLine());
+            
+            Console.WriteLine("Enter The Second Number");
+            num1=Convert.ToDecimal(Console.ReadLine());
+
+            res = num + num1;
+
+            Console.WriteLine("The Result is : " + res);
+    
+        }
+    }
+}
+_________
+using System;
+
+namespace ConsoleApp11
+{
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Add in two Number");
+            //  int num;// collection of similar datatype
+            // int num1;
+            // int res;
+
+            decimal num, num1, res;
+            Console.Write("Enter The First Number");
+            num=Convert.ToDecimal(Console.ReadLine());
+            
+            Console.Write("Enter The Second Number");
+            num1=Convert.ToDecimal(Console.ReadLine());
+
+            res = num + num1;
+
+            Console.WriteLine("The Result is : " + res);
+    
+        }
+    }
+}
+_________
+using System;
+
+namespace ConsoleApp11
+{
+     class Program
+    {
+        // static   static int a=10
+        // nonstatic int b=10
+
+        int b = 101;// on stat
+         // b 10  b 201// non static are create sperate copy
+        static int a = 201;// static
+        // a 201 // d't create sep copy override
+
+ 
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Add in two Number");
+            //  int num;// collection of similar datatype
+            // int num1;
+            // int res;
+           decimal num, num1, res;
+            Console.Write("Enter The First Number");
+            num=Convert.ToDecimal(Console.ReadLine());
+            
+            Console.Write("Enter The Second Number");
+            num1=Convert.ToDecimal(Console.ReadLine());
+
+            res = num + num1; //10+1
+            Console.WriteLine("The Result is : " + res);
+
+          //  Console.WriteLine("The Result is : " + res);
+            res = num - num1;
+            Console.WriteLine("The Result is : "+res);
+    
+        }
+    }
+}
+_____________
+using System;
+
+namespace ConsoleApp11
+{
+     class Program
+    {
+
+ 
+        static void Main(string[] args)
+        {
+
+// breakpoint  step - step proc
+            Console.WriteLine("Add in two Number");       
+            decimal num, num1, res;
+            Console.Write("Enter The First Number");
+            num=Convert.ToDecimal(Console.ReadLine());
+            
+            Console.Write("Enter The Second Number");
+            num1=Convert.ToDecimal(Console.ReadLine());
+
+            res = num + num1; //10+1
+            Console.WriteLine("The Result is : " + res);
+
+            res = num - num1;
+            Console.WriteLine("The Result is : "+res);
+            Console.ReadLine();
+        }
+    }
+}
+_____________
+using System;
+
+namespace ConsoleApp11
+{
+     class Program
+    {
+
+ 
+        static void Main(string[] args)
+        {
+
+
+        // if else
+        // if means true 1 and else means  false 0 
+        // if are declare any datatype  like int string char
+        // if contain min one condition
+        // type of if statement
+        // if
+        // if-else (else optional)
+        // nested if
+        // if-else-if (ladder)
+          // structue  if(condi) { statment}
+          // else {statent}
+            
+            Console.WriteLine("Add in two Number");
+            decimal num;
+            Console.Write("Enter The First Number");
+            num=Convert.ToDecimal(Console.ReadLine());
+
+            if (num == 12)
+            {
+                Console.WriteLine("Welcome");
+            }
+
+
+
+            
+            
+            
+            
+        }
+    }
+}
+_________
+using System;
+
+namespace ConsoleApp11
+{
+     class Program
+    {
+
+ 
+        static void Main(string[] args)
+        {
+
+
+        // if else
+        // if means true 1 and else means  false 0 
+        // if are declare any datatype  like int string char
+        // if contain min one condition
+        // type of if statement
+        // if
+        // if-else (else optional)
+        // nested if
+        // if-else-if (ladder)
+          // structue  if(condi) { statment}
+          // else {statent}
+            
+            Console.WriteLine("Add in two Number");
+            decimal num;
+            Console.Write("Enter The First Number");
+            num=Convert.ToDecimal(Console.ReadLine());
+
+            if (num == 12)
+      // login page , mobile app,atm pincode,choice ,vowel
+            {
+                Console.WriteLine("Welcome");
+            }
+            else
+            { 
+             Console.WriteLine("Try again");
+            }
+
+        }
+    }
+}
+_____________
+using System;
+
+namespace ConsoleApp11
+{
+     class Program
+    {
+
+ 
+        static void Main(string[] args)
+        {
+
+
+        // if else
+        // if means true 1 and else means  false 0 
+        // if are declare any datatype  like int string char
+        // if contain min one condition
+        // type of if statement
+        // if
+        // if-else (else optional)
+        // nested if
+        // if-else-if (ladder)
+          // structue  if(condi) { statment}
+          // else {statent}
+            
+            Console.WriteLine("Add in two Number");
+            char num;
+            Console.Write("Enter The First Number");
+            num=Convert.ToChar(Console.ReadLine());
+
+            if (num == 'a' || num=='e' || num == 'o' || num == 'i')//a e i o u 
+      // login page , mobile app,atm pincode,choice ,vowel
+            {
+                Console.WriteLine("Vowel");
+            }
+           
+            else
+            {
+                Console.WriteLine("Try again");
+            }
+
+            
+        }
+    }
+}
+_________
+using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Add in two Number");
+            int num;
+            Console.Write("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            //    if (num>10) // greater then
+            // if (num >= 10) // greater then equal to
+            //   if(num<10)// less then
+            if (num <= 10)// less then equal to
+            {
+                Console.WriteLine("Vowel");
+            }
+
+            else
+            {
+                Console.WriteLine("Try again");
+            }
+
+        }
+    }
+}
+_________
+using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Add in two Number");
+            int num;
+            Console.Write("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            //    if (num>10) // greater then
+            // if (num >= 10) // greater then equal to
+            //   if(num<10)// less then
+            if (num <= 10)// less then equal to
+            // range marksheet
+            {
+                Console.WriteLine("Vowel");
+            }
+
+            else
+            {
+                Console.WriteLine("Try again");
+            }
+
+        }
+    }
+}
+_________
+using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Add in two Number");
+            int num;
+            Console.Write("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());
+
+
+            if (num != 10) // not  
+            // range marksheet
+            {
+                Console.WriteLine("Vowel");
+            }
+
+            else
+            {
+                Console.WriteLine("Try again");
+            }
+
+        }
+    }
+}
+_________
+using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Add in two Number");
+            int num,num1;
+            Console.Write("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter The Second Number");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            // salary 5000 9000
+            if (num >=50000 && num1<=90000) // not  
+            // range marksheet
+            {
+                Console.WriteLine("Vowel");
+            }
+
+            else
+            {
+                Console.WriteLine("Try again");
+            }
+
+        }
+    }
+}
+_____________
+using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+      // Admin   - Admin - 1122 , Admin1 - 2222
+            // welcome to my Admin PAge
+      // Guest    - Guest - 9281
+            // welcome to my Guest PAge
+
+            Console.WriteLine("Login Page");
+            string Name;
+            int pass;
+            Console.Write("Enter The USerName");
+            Name = Console.ReadLine();
+            Console.Write("Enter The Pin Number");
+            pass = Convert.ToInt32(Console.ReadLine());
+            if (Name == "admin" && pass == 1122)
+            {
+
+                Console.WriteLine("Welcome User " + Name);
+            }
+            else
+            {
+                Console.WriteLine("Invaild user");
+            }
+       
+          
+
+        }
+    }
+}
+_________
+
+using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+      // Admin   - Admin - 1122 , Admin1 - 2222
+            // welcome to my Admin PAge
+      // Guest    - Guest - 9281
+            // welcome to my Guest PAge
+    // account
+
+            Console.WriteLine("Login Page");
+            string Name;
+            int pass;
+            Console.Write("Enter The USerName");
+            Name = Console.ReadLine();
+            Console.Write("Enter The Pin Number");
+            pass = Convert.ToInt32(Console.ReadLine());
+            if ((Name == "admin" && pass == 1122)|| (Name == "admin1" && pass == 2222))
+            {
+
+                Console.WriteLine("Welcome User " + Name);
+            }
+           else if ((Name == "Guest" && pass == 1122))
+            {
+
+                Console.WriteLine("Welcome Guest " + Name);
+            }
+            else
+            {
+                Console.WriteLine("Invaild user");
+            }
+       
+          
+
+        }
+    }
+}
+
+
+  Marksheet
+  odd and even
+  enter 3 random number  find the highest value
+  
+  Press1 to aDd press 2 to Sub  3 Divide
+  nested - switch
+  -------------------------
+  class - 5
+  -------------------------
+
+using System;
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // nested if 
+            //  // inner // outer sta
+            // Atm
+            //  pincode>  4 option cash mini fast >
+            // cur > sav
+            // gmail > das> mail inbox 
+            int pincode;
+            char ch;
+            Console.WriteLine("Enter The 4 Digit Pin code");
+            pincode=Convert.ToInt32(Console.ReadLine());
+            if (pincode == 1234)
+            {
+  Console.WriteLine("\t\t\tWelcome to MY DashBoard");
+  Console.WriteLine("Press A to Cash\t Press B to Fast Tra");
+               ch=Convert.ToChar(Console.ReadLine());
+                if (ch == 'A' || ch == 'a')
+                {
+                    Console.WriteLine("Cash Widh");
+                }
+                else if (ch == 'B' || ch == 'b')
+                {
+                    Console.WriteLine("Fash Widh");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Try Again");
+            }
+
+
+
+
+
+
+        }
+    }
+}
+________
+using System;
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string username, passcode;
+            Console.WriteLine("Enter the UserName");
+            username = Console.ReadLine();
+            Console.WriteLine("Enter the User Passcode");
+            passcode = Console.ReadLine();
+
+            if (username == "Admin" && passcode == "Admin123")
+            {
+                Console.WriteLine("\tWelcome to MY Admin Dashboard");
+                Console.WriteLine("1 Add\t2 Divide");
+
+            }
+            else if (username == "Guest" && passcode == "Guest123")
+            {
+                Console.WriteLine("Welcome to MY Guest Dashboard");
+                Console.WriteLine("Atm");
+            }
+            else if (username == "Acc" && passcode == "Acc123")
+            {
+                Console.WriteLine("Welcome to MY Account Dashboard");
+            }
+            else
+            {
+                Console.WriteLine("Check your credi....");
+            }
+
+
+        }
+    }
+}
+________
+using System;
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // switch  choice 
+            // a add b divi  c mul  
+            // vowel  a e i o u 
+            Console.WriteLine("Enter The Alph");
+            char ch;
+            ch = Convert.ToChar(Console.ReadLine());
+            switch (ch)
+            {
+                case 'a':
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'e':
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'i':
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'o': {
+                        Console.WriteLine("Vowel");
+                        break;
+                    }
+                default:
+                    Console.WriteLine("Cons...");
+                    break;
+            }
+
+        }
+    }
+}
+________
+using System;
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // switch  choice 
+            // a add b divi  c mul  
+            // vowel  a e i o u 
+            Console.WriteLine("Enter The Alph");
+            char ch;
+            ch = Convert.ToChar(Console.ReadLine());
+            switch (ch)
+            {
+                case 'a':                  
+                   // break;
+                case 'A':
+                    Console.WriteLine("Hello vowel");
+                    break;
+                case 'e':                
+                   // break;
+                case 'i':                 
+                   // break;
+                case 'o': 
+                        Console.WriteLine("Vowel");
+                       break;
+                    
+                default:
+                    Console.WriteLine("Cons...");
+                    break;
+            }
+
+        }
+    }
+}
+________
+using System;
+using System.Runtime.InteropServices;
+
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // switch  choice 
+            // a add b divi  c mul  
+            // vowel  a e i o u 
+            Console.WriteLine("Press a to Divide \t Press b Sum \t Press c to Mul");
+            char ch;
+            int a, b, c;
+            ch = Convert.ToChar(Console.ReadLine());
+            switch (ch)
+            {
+                case 'a':
+                case 'A':
+                    a = 100;
+                    b = 20;
+                    c = a / b;
+                    Console.WriteLine("The Result is :" + c);
+                    break;// terminate .
+
+                case 'B':
+                case 'b':
+                    a = 100;
+                    b = 20;
+                    c = a + b;
+                    Console.WriteLine("The Result is :" + c);
+                    break;
+
+
+                case 'C':
+                    int a11 = 100; // local var
+                    int b11 = 20;
+                    int c11 = a11 * b11;
+                    Console.WriteLine("The Result is :" + c11);
+                    break;
+                default:
+                    Console.WriteLine("Cons...");
+                    break;
+            }
+
+        }
+    }
+}
+________
+using System;
+using System.Runtime.InteropServices;
+
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // switch  choice 
+            // a add b divi  c mul  
+            // vowel  a e i o u 
+
+            // if 
+            //{ if /switch }
+            int pincode;
+     
+            Console.WriteLine("Enter The 4 Digit Pin code");
+            pincode = Convert.ToInt32(Console.ReadLine());
+            if (pincode == 1234)
+            {
+
+                Console.WriteLine("Press a to Divide \t Press b Sum \t Press c to Mul");
+                char ch;
+                int a, b, c;
+                ch = Convert.ToChar(Console.ReadLine());
+                switch (ch)
+                {
+                    case 'a':
+                    case 'A':
+                        // nested switch /if
+                        a = 100;
+                        b = 20;
+                        c = a / b;
+                        Console.WriteLine("The Result is :" + c);
+                        break;// terminate .
+
+                    case 'B':
+                    case 'b':
+                        a = 100;
+                        b = 20;
+                        c = a + b;
+                        Console.WriteLine("The Result is :" + c);
+                        break;
+
+
+                    case 'C':
+                        int a11 = 100; // local var
+                        int b11 = 20;
+                        int c11 = a11 * b11;
+                        Console.WriteLine("The Result is :" + c11);
+                        break;
+                    default:
+                        Console.WriteLine("Cons...");
+                        break;
+                }
+
+            }
+            else
+            { 
+            
+            }
+
+
+        }
+    }
+}
+___________
+
+using System;
+using System.Runtime.InteropServices;
+
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // switch  choice 
+            // a add b divi  c mul  
+            // vowel  a e i o u 
+
+            // if 
+            //{ if /switch }
+            int pincode;
+     
+            Console.WriteLine("Enter The 4 Digit Pin code");
+            pincode = Convert.ToInt32(Console.ReadLine());
+            if (pincode == 1234)
+            {
+                Console.WriteLine("Press a to Divide \t Press b Sum \t Press c to Mul");
+                char ch;
+                int a, b, c;
+                ch = Convert.ToChar(Console.ReadLine());
+                switch (ch)
+                {
+                    case 'a':
+                    case 'A':
+                        // nested switch /if
+                        a = 100;
+                        b = 20;
+                        c = a / b;
+                        Console.WriteLine("The Result is :" + c);
+                        break;// terminate .
+
+                    case 'B':
+                    case 'b':
+                        a = 100;
+                        b = 20;
+                        c = a + b;
+                        Console.WriteLine("The Result is :" + c);
+                        break;
+
+
+                    case 'C':
+                        int a11 = 100; // local var
+                        int b11 = 20;
+                        int c11 = a11 * b11;
+                        Console.WriteLine("The Result is :" + c11);
+                        break;
+                    default:
+                        Console.WriteLine("Cons...");
+                        break;
+                }
+
+            }
+            else
+            { 
+            
+            }
+
+
+        }
+    }
+}
+___________
+using System;
+using System.Runtime.InteropServices;
+
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a = 5;
+            // a++
+            int b = a++;// b=a+1;// swap the value
+            // a++
+            // value init / inc- orig
+            Console.WriteLine(b);
+
+
+
+        }
+    }
+}
+___________
+using System;
+
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a = 5;
+            // a++
+            int b = a++ + a++ + a++;
+            // b= 5+------
+            // b=5+(5+1)+---
+            // b=5+6+(6+1)
+
+// b=5+6
+            Console.WriteLine(b);
+           
+
+
+
+        }
+    }
+}
+________
+using System;
+
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a = 5;
+            // a++
+            int b = ++a + ++a;
+// b=5+6
+            Console.WriteLine(b);
+           
+
+
+
+        }
+    }
+}
+___________
+using System;
+
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a = 5;
+            // a++
+            int b = a--;
+// b=5+6
+            Console.WriteLine(b);
+           
+
+
+
+        }
+    }
+}
+  -------------------------
+  class - 6
+  -------------------------
+
+Question- explain step  by step compiplation
+	process in >net fRamework 
+	Explain role of clr , Cts, Cls
+	
+	// Language complier
+	// just in time complier
+	
+Cls - Common language Specification
+	- specifie how program are converted into MSil 
+	- spec.. basic language feature to follow..
+		- CTS Common type System
+			specifies how types declare  , used 
+			helps in integration
+	  clr - common lan runtime 
+			 virtual machine
+				provide .net runtime envirement
+				
+	
+//Quest - What is Cts Significant in cts .net frame
+ cts - common type system and  is  used to Standardize
+ the  datatype of all the progamming language using net 
+ Function if cts	
+	Cross langaunge integration type safety
+	complie of implemantation of many progamming lan.
+cts Support
+ type	
+	 value type - userdefine , built iin , enu etc
+	Ref type - self describing inst= class and array
+	
+______
+
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // looping
+            // do while , while , for 
+
+            // do while 
+            // value init / print/inc / condit
+
+            int num;
+            Console.WriteLine("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());//1
+            do
+            {
+                Console.WriteLine("The num value is :"+num);//1//2
+                num = num + 1;// num = 2+1
+
+            } while (num <= 10);// 2<=10 T
+            Console.ReadLine();
+        }
+    }
+}
+________using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // looping
+            // do while , while , for 
+
+            // do while 
+            // value init / print/inc / condit
+
+            int num;
+            Console.WriteLine("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());//1
+            do
+            {
+                Console.WriteLine("The num value is :"+num);//1//2
+                  //   num = num + 1;// num = 2+1
+                num++;
+
+            } while (num <= 10);// 2<=10 T
+            Console.ReadLine();
+        }
+    }
+}
+______
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // looping
+            // do while , while , for 
+
+            // do while 
+            // value init / print/inc / condit
+
+            int num;
+            Console.WriteLine("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());//1
+            do
+            {
+                num = num + 1;
+                Console.WriteLine("The num value is :"+num);//1//2
+                  //   num = num + 1;// num = 2+1
+                num++;
+
+            } while (num <= 10);// 2<=10 T
+            Console.ReadLine();
+        }
+    }
+}
+_______
+
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // looping
+            // do while , while , for 
+
+            // do while 
+            // value init / print/inc / condit
+
+            int num,cond;
+            Console.WriteLine("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());//1
+
+            Console.WriteLine("Enter The Loop Condition");
+            cond = Convert.ToInt32(Console.ReadLine());
+            do
+            {
+             
+                Console.WriteLine("The num value is :"+num);//1//2
+                
+                num++;
+
+            } while (num <= cond);// 2<=10 T
+            Console.ReadLine();
+        }
+    }
+}
+_______
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // looping
+            // do while , while , for 
+
+            // do while 
+            // value init / print/inc / condit
+
+            int num,cond;
+            Console.WriteLine("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());//1
+
+            Console.WriteLine("Enter The Loop Condition");
+            cond = Convert.ToInt32(Console.ReadLine());
+            do
+            {             
+                Console.WriteLine("The num value is :"+num);//1//2                
+              
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine("\t\tEven "+num);
+                }else
+                {
+                    Console.WriteLine("\t\tOdd " + num);
+                }
+              num++;
+            } while (num <= cond);// 2<=10 T
+            Console.ReadLine();
+        }
+    }
+}
+______
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // looping
+            // do while , while , for 
+
+            //  while 
+            // value init  / condit / print/inc
+
+            // login  
+            // total attempt 3 
+            //  Do you want another tran Press Y/N
+            // a-z with a help while 
+            // A-Z with a help while 
+            // Find The Prime Number
+            // create loop and find the natural number 
+
+            int num,cond;
+            int sum = 0;
+            Console.WriteLine("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());//1
+
+            Console.WriteLine("Enter The Loop Condition");
+            cond = Convert.ToInt32(Console.ReadLine());
+            while (num <= cond) 
+            {             
+                Console.WriteLine("The num value is :"+num);//1//2                
+              
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine("\t\tEven "+num);
+                }else
+                {
+                    Console.WriteLine("\t\tOdd " + num);
+                }
+                sum = sum + num;
+              num++;
+            }
+            Console.WriteLine("The Sum is : " + sum);
+            Console.ReadLine();
+        }
+    }
+}
+_______
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // looping
+            // do while , while , for 
+
+            //  while 
+            // value init  / condit / print/inc
+
+            // login  
+            // total attempt 3 
+            //  Do you want another tran Press Y/N
+            // a-z with a help while 
+            // A-Z with a help while 
+            // Find The Prime Number
+            // create loop and find the natural number 
+
+            int num,cond;          
+            Console.WriteLine("Enter The First Number");
+            num = Convert.ToInt32(Console.ReadLine());//1
+
+            Console.WriteLine("Enter The Loop Condition");
+            cond = Convert.ToInt32(Console.ReadLine());
+            while (num <= cond) 
+            {             
+                Console.WriteLine("The num value is :"+Convert.ToChar( num));//1//2                
+              // 65 97
+              num++;
+            }
+           
+            Console.ReadLine();
+        }
+    }
+}
+__________
+
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // for loop
+
+            for (int a = 1; a <= 10; a++)
+            { 
+            Console.WriteLine(a);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+__________
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // for loop
+
+            for (int a = 1; a <= 10; a++)
+            {
+                if (a == 5)
+                {
+                    Console.WriteLine("Stop value "+a);
+                    break;
+                }
+                Console.WriteLine(a);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+__________
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // for loop
+
+            for (int a = 1; a <= 10; a++)
+            {
+                if (a == 5)
+                {
+                    Console.WriteLine("Cont value "+a);
+                    continue;
+                }
+                Console.WriteLine(a);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+______
+using System;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // for loop
+            int a = 1;
+            
+
+            for (; a <= 10; a++)
+            {
+                Console.WriteLine(a);
+            }
+
+           
+        }
+    }
+}
+  -------------------------
+  class - 7
+  -------------------------
+
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // for nested
+            // outer> inner
+            for (int i = 1; i <= 5; i++)// 1;3<=5(T);2+1
+            {
+                for (int j = 1; j <= i; j++)//1;3<=2(T);2+2
+                {
+                    Console.Write(i); //22
+                }
+                Console.WriteLine();
+            }
+
+            // 1
+            //22
+
+            Console.ReadLine();
+
+
+        }
+    }
+}
+
+_____
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // for nested
+            // outer> inner
+            for (int i = 1; i <= 10; i++)//1;2<=10(T
+            {
+                for (int j = 1; j <= 10; j++)//1;11<=10(t
+                {
+                    Console.Write(i*j+"\t"); //(2*3)
+                }
+                Console.WriteLine();
+            }
+
+             //*
+             //**
+             //*
+             //1
+             //12
+             //1233
+             //**
+             //   *
+             //   **
+             //   *
+
+
+            // 123 --- 10
+            //246
+            //22
+
+            Console.ReadLine();
+
+
+        }
+    }
+}
+______
+
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // array
+            // int a int b int c  int d
+            //int a = 10;
+            //int b = 20;
+            //int v = 34;
+            //int sum = 55;
+            // collection of similar datatype
+            // array are declare any datatype
+            // array contain default index is 0,1
+            // each index use in different value 65,102
+            //  one d array( signle row and single column
+            //declaration  of array 
+            // datatype{int} [rank] arrayName(USerdefine);
+            // arrayname= new  int[5]
+
+            int[] Roll;//declare
+            Roll = new int[5]; // initial
+            Console.WriteLine(Roll[0]);
+            Console.WriteLine(Roll[4]);
+            Console.WriteLine(Roll[3]);
+            Console.Write(Roll[3]+" "+ Roll[2] +" "+ Roll[1] );
+            // print all index
+            Console.ReadLine();
+        }
+    }
+}
+______
+
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] Roll;//declare
+            Roll = new int[6]; // initial
+            // print all index
+            for (int i = 0; i < 6; i++)
+            {
+                Console.Write(i+"\t");
+                //Console.Write(Roll + "\t");
+                //Console.Write(Roll[i] + "\t");
+            }
+            // find array length
+            Console.WriteLine("Array Length" + Roll.Length);
+            for (int i = 0; i < Roll.Length; i++)
+            {
+                Console.Write(i + "\t");
+            }
+        }
+    }
+}
+________
+
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] Roll;//declare
+            Roll = new int[6]; // initial
+
+            Roll[0] = 10;
+            Roll[1] = 20;
+            Roll[2] = 30;
+            Roll[3] = 40;
+            Roll[4] = 50;
+            Roll[5] = 60;
+
+
+            for (int i = 0; i < Roll.Length; i++)
+            {
+                Console.Write(i + "\t");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < Roll.Length; i++)
+            {
+                Console.Write(Roll[i]+"\t");
+            }
+
+
+        }
+    }
+}
+_______
+
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //       int[] Roll = new int[6];
+            //   int[] Roll = new int[6] { 1,2,3,4,5,6};
+            // int[] Roll = new int[] { 1, 2, 3, 4, 5, 6 };
+            int[] Roll = { 1,2,3,4,5,6};
+            //Roll[0] = 10;
+            //Roll[1] = 20;
+            //Roll[2] = 30;
+            //Roll[3] = 40;
+            //Roll[4] = 50;
+            //Roll[5] = 60;
+
+            for (int i = 0; i < Roll.Length; i++)
+            {
+                Console.Write(i + "\t");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < Roll.Length; i++)
+            {
+                Console.Write(Roll[i]+"\t");
+            }
+
+
+        }
+    }
+}
+______
+
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // dynamic array
+
+            int size;
+            Console.WriteLine("Enter the Array Size");
+            size=Convert.ToInt32(Console.ReadLine());   
+
+            int[] Roll = new int[size];
+            // print array index
+            for (int i = 0; i < Roll.Length; i++)
+            {
+                Console.Write(i+"\t");
+            }
+            Console.WriteLine();
+            // Enter The array value
+
+            for (int i = 0; i < Roll.Length; i++)
+            {
+                Console.WriteLine("array index value : "+i);
+                Roll[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            // colelctio of  similar data type va;ue  print
+            // foreach
+            foreach (int obj in Roll)// 012345
+            {
+                Console.WriteLine(obj);
+            }
+
+        }
+    }
+}
+_______
+
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // dynamic array
+
+            int size;
+            Console.WriteLine("Enter the Array Size");
+            size=Convert.ToInt32(Console.ReadLine());   
+
+            string [] Roll = new string[size];
+
+           
+
+            for (int i = 0; i < Roll.Length; i++)
+            {
+                Console.WriteLine("array index value : "+i);
+                Roll[i] = (Console.ReadLine());
+            }
+
+
+            foreach (string obj in Roll)// 012345
+            {
+                Console.WriteLine(obj);
+            }
+
+        }
+    }
+}
+_____
+
+using System;
+
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // dynamic array
+
+            int[,] Roll = new int[2, 2];
+            Roll[0, 0] = 1;
+            Roll[0, 1] = 2;
+            Roll[1, 0] = 3;
+            Roll[1, 1] = 4;
+            for (int i = 0; i < 2; i++)//row
+            {
+                for (int a = 0; a < 2; a++)// col
+                {
+    Console.Write(Roll[i, a]);
+                }
+                Console.WriteLine();
+            }
+
+        }
+    }
+}
+  -------------------------
+  class - 8
+  -------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp18
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int c = 5;
+            int a = 0;
+            for (int i = 1; i <= c; i++)
+            {
+                if (c % i == 0)
+                {
+                    a++;
+                }                
+            }
+
+            if (a == 2)
+            {
+                Console.WriteLine("Prime " + c);
+            }
+            else
+            {
+                Console.WriteLine("not a Prime " + c);
+
+            }
+
+
+        }
+    }
+}
+_____
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp18
+{
+    internal class Program
+    {
+       static int counter;
+        static int i,j;
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter the Strting value");
+            int start = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Condition");
+            int Cond = Convert.ToInt32(Console.ReadLine());
+            for (i = start; i <= Cond; i++)
+            {
+                counter = 0;
+                for (j = 2; j <= i / 2; j++)
+                {
+                    if ((i % j) == 0)
+                    {
+                        counter++;
+                        break;
+                    }
+                }
+
+            if (counter == 0 && i != 1)
+            {
+                Console.WriteLine("Prime " + i);
+            }
+        }
+
+            Console.ReadLine();
+
+        }
+    }
+}
+____________
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp18
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int[] roll = new int[4];
+            roll[0] = 10;
+            roll[1] = 01;
+            roll[2] = 30;
+            roll[3] = 04;
+
+            foreach (var item in roll)
+            {
+                Console.Write(item+" ");
+            }
+
+
+
+
+
+
+        }
+    }
+}
+____________
+using System;
+
+    class Program //house 
+    {
+    
+       int Num = 10;
+        static void Main(string[] args)
+        {
+        // public private internal protected           
+        // class local variable create 
+        // class instance
+        // class object 
+        Program program=new Program(); // open
+        Console.WriteLine(program.Num);
+
+
+        }
+    }
+
+____________
+using System;
+
+
+class Demo
+{
+   public int Roll = 30;
+}
+    class Program //house 
+    {
+    
+       int Num = 10;
+        static void Main(string[] args)
+        {
+         Program program=new Program(); // open
+         Console.WriteLine(program.Num);
+        Demo demo = new Demo();
+        Console.WriteLine(demo.Roll);
+
+
+
+        }
+    }
+
+_____
+using System;
+
+
+class Demo
+{
+   public int Roll = 30;
+}
+    class Program //house 
+    {
+    
+       int Num = 10;
+        static void Main(string[] args)
+        {
+         Program program=new Program(); // open
+         Console.WriteLine(program.Num);
+        Demo demo = new Demo();
+        Console.WriteLine(demo.Roll);
+
+
+
+        }
+    }
+
+____________
+using Panditji;
+using System;
+using System.Data.SqlClient;
+//using Panditji;
+namespace ConsoleApp18
+{
+    //   class Program:Demo //house 
+    class Program
+    {
+        int a, b, c; //global  var
+        public void Add()
+        {
+            Acceptvalue();
+            // int a, b, c; // local variable           
+            c = a + b;
+            Console.WriteLine("The Result is : " + c);           
+        }
+        public void Acceptvalue()
+        { 
+           Console.WriteLine("Enter The First");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter The Second");
+            b = Convert.ToInt32(Console.ReadLine());
+        }
+        public void Sub()
+        {
+            Acceptvalue();
+            c = a - b;
+            Console.WriteLine("The Result is : " + c);      
+        }
+        char ch;
+        public void choice()
+        {
+            Console.WriteLine("Enter The Choice ");
+            ch=Convert.ToChar(Console.ReadLine());
+            switch (ch)
+            {
+                case 'a':
+                    Add();
+                    break;
+                case 'b':Sub();
+                    break;
+                default:
+                    break;
+            }
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+          
+            program.choice();
+         //   program.Sub();
+
+
+
+        }
+    }
+}
+  -------------------------
+  class - 9
+  -------------------------
+
+using System;
+
+namespace ConsoleApp20
+{
+    internal class Program
+    {
+        private void Display()
+        {
+            Console.WriteLine("Hello Display");
+        }
+        public void Add()
+        {
+            Display();
+            Console.WriteLine("Hello");
+            Display();
+        }
+        static void Main(string[] args)
+        {
+Program program = new Program();
+            program.Add();
+         //   program.Display();
+
+        }
+    }
+}
+
+_______
+using System;
+
+namespace ConsoleApp20
+{
+   
+    internal class Program
+    {
+        // static // non static function/Variable
+        int a = 10; // non static
+        static int b = 10; //static
+
+        public static void Add()
+        {
+            //static block contain only static
+            Console.WriteLine("The Value is :" + b);
+        }
+        static void Main(string[] args)
+        {
+            Add();
+        }
+    }
+}
+___________
+
+using System;
+
+namespace ConsoleApp20
+{
+   
+    internal class Program
+    {
+        // static // non static function/Variable
+        int a = 10; // non static
+        static int b = 10; //static
+        public void sub()
+        {
+            // non static block conatin both
+            Console.WriteLine("The Value is :" + b);
+            Console.WriteLine("The Value is :" + a);
+        }
+        public static void Add()
+        {
+            //static block contain only static
+            Console.WriteLine("The Value is :" + b);
+        }
+        static void Main(string[] args)
+        {
+            Add();
+            Program program = new Program();
+            program.sub();
+        }
+    }
+}
+___________
+using System;
+using System.ComponentModel;
+
+namespace ConsoleApp20
+{
+    class Demo
+    {
+        static int b = 10; //static
+        public static void Add()
+        {
+            //static block contain only static
+            Console.WriteLine("The Value is :" + b);
+        }
+    }   
+    internal class Program
+    {
+        public static void Sub()
+        {
+            Demo.Add();
+            //static block contain only static
+            Console.WriteLine("The Value is :");
+        }
+        static void Main(string[] args)
+        {
+            Sub();// call for same class 
+           // Demo.Add();// call for another class
+        }
+    }
+}
+___________
+using System;
+using System.ComponentModel;
+
+namespace ConsoleApp20
+{
+
+  
+    static class Program
+    {
+        public static void Sub()
+        {
+          
+            //static block contain only static
+            Console.WriteLine("The Value is :");
+        }
+        static void Main(string[] args)
+        {
+            Sub();// call for same class 
+           // Demo.Add();// call for another class
+        }
+    }
+}
+___________
+using System;
+using System.ComponentModel;
+
+namespace ConsoleApp20
+{
+
+  
+    static class Program
+    {
+        public static void Sub()
+        {
+          
+            //static block contain only static
+            Console.WriteLine("The Value is :");
+        }
+        static void Main(string[] args)
+        {
+            Sub();// call for same class 
+           // Demo.Add();// call for another class
+        }
+    }
+}
+___________
+using System;
+using System.ComponentModel;
+
+namespace ConsoleApp20
+{
+    // Constructor
+     class Program
+    {
+        int num ; //  0
+        string Name ; // null
+        public void Display()
+        {
+            Console.WriteLine("Num value is : "+num);
+            Console.WriteLine("Name is : "+Name);
+        }
+
+        public Program()// this is a default constr
+        {
+            num = 0;
+            Name = null;
+            Console.WriteLine("Num value is : " + num);
+            Console.WriteLine("Name is : " + Name);
+        }
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();//class instance
+       
+           
+        }
+    }
+}
+_______
+using System;
+using System.ComponentModel;
+
+namespace ConsoleApp20
+{
+    // Constructor
+     class Program
+    {
+        int num ; //  0
+        string Name ; // null
+        public void Display()
+        {
+            Console.WriteLine("Num value is : "+num);
+            Console.WriteLine("Name is : "+Name);
+        }
+
+        public Program()// this is a default constr
+        {
+            num = 100;
+            Name = "Arun";
+            Console.WriteLine("Num value is : " + num);
+            Console.WriteLine("Name is : " + Name);
+        }
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();//class instance
+            Program program2 = new Program();
+            Program program1 = new Program();
+        }
+    }
+}
+___________
+using System;
+using System.ComponentModel;
+using System.Data.SqlTypes;
+using System.Diagnostics.Contracts;
+
+namespace ConsoleApp20
+{
+    // para Constructor
+     class Program
+    {
+        public Program(int a, int b)
+        {
+            Console.WriteLine("The Sum is : "+(a+b));
+        }
+        static void Main(string[] args)
+        {
+            int a, num;
+            Console.WriteLine("The A value is :");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The NUm value is :");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            Program program = new Program(a,num);// Parame
+
+        }
+    }
+}
+_______
+using System;
+using System.ComponentModel;
+using System.Data.SqlTypes;
+using System.Diagnostics.Contracts;
+
+namespace ConsoleApp20
+{
+    // para Constructor
+     class Program
+    {
+        public Program(int a, int b)
+        {
+            Console.WriteLine("The Sum is : "+(a+b));
+        }
+
+        static void Main(string[] args)
+        {
+            int a, num;
+            Console.WriteLine("The A value is :");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The NUm value is :");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            Program program = new Program(a,num);// Parame
+
+        }
+    }
+}
+_______________
+using System;
+using System.ComponentModel;
+using System.Data.SqlTypes;
+using System.Diagnostics.Contracts;
+using System.Security.Policy;
+
+namespace ConsoleApp20
+{
+    // para Constructor
+     class Program
+    {
+        int a, b, c;
+//        Parameterized Constructor in C#
+//A constructor with at least one parameter is called a parameterized constructor.
+//The advantage of a parameterized constructor is that you can initialize each
+//instance of the class with a different value.
+
+        public Program(int a, int b)
+        {
+
+//            This
+//•	this is a keyword that refers to the current instance of the class. 
+//•	There can be 3 main usage of this keyword in C#.
+//•	It can be used to refer current class instance variable.
+       //It is used if field names(instance variables) and parameter names are same, that is why both can be distinguish easily.
+//•	It can be used to pass current object as a parameter to another method.
+//•	It can be used to declare indexers.
+
+            this.a = a;
+            this.b = b;
+            c = a + b;
+        //   Console.WriteLine("The Sum is : "+c);
+        }
+        public void Add()
+        {
+            Console.WriteLine(a+b);
+            Console.WriteLine("The Sum is : " + c);
+        }
+
+        static void Main(string[] args)
+        {
+            int a, num;
+            Console.WriteLine("The A value is :");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The NUm value is :");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            Program program = new Program(a,num);// Parame
+            program.Add();
+        }
+    }
+}
+___________
+
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.SqlTypes;
+using System.Diagnostics.Contracts;
+using System.Reflection;
+using System.Security.Policy;
+
+namespace ConsoleApp20
+{
+    // para Constructor
+     class Program
+    {// class creation
+
+        static Program()
+        {
+            Console.WriteLine("Hello Static cons");
+        }
+        static void Main(string[] args)
+        {
+            // constr are call without class instance
+            // call f0r class creation
+
+//            Static Constructor in C#
+//When a constructor is created using a static keyword, it will be invoked only once for all of the instances of the class and it is invoked during the creation of the first instance of the class or the first reference to a static member in the class. A static constructor is used to initialize static fields of the class and to write the code that needs to be executed only once.
+//Some key points of a static constructor are: 
+//1.	A static constructor does not take access modifiers or have parameters.
+//2.	A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced.
+//3.	A static constructor cannot be called directly.
+//4.	The user has no control over when the static constructor is executed in the program.
+//5.	A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.
+
+        }
+    }
+}
+___________
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.SqlTypes;
+using System.Diagnostics.Contracts;
+using System.Reflection;
+using System.Security.Policy;
+
+namespace ConsoleApp20
+{
+    // para Constructor
+     class Program
+    {// class creation
+
+        static Program()
+        {
+            Console.WriteLine("Hello Static cons");
+        }
+        ~Program()// create class instance
+        {
+            Console.WriteLine("Destr");
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();    
+        }
+    }
+}
+___________
+What is a constructor in C#?
+A special method of the class that is automatically invoked when an instance of the class is created is called a constructor. The main use of constructors is to initialize the private fields of the class while creating an instance for the class. When you have not created a constructor in the class, the compiler will automatically create a default constructor of the class. The default constructor initializes all numeric fields in the class to zero and all string and object fields to null.
+
+Some of the key points regarding constructor are
+•	A class can have any number of constructors.
+•	A constructor doesn't have any return type, not even void.
+•	A static constructor can not be a parametrized constructor.
+•	Within a class, you can create one static constructor only. 
+In C#, constructors can be divided into 5 types
+1.	Default Constructor
+2.	Parameterized Constructor
+3.	Copy Constructor
+4.	Static Constructor
+5.	Private Constructor
+
+
+
+
+
+Default Constructor in C#
+Public void add()
+A constructor without any parameters is called a default constructor; in other words, this type of constructor does not take parameters. The drawback of a default constructor is that every instance of the class will be initialized to the same values and it is not possible to initialize each instance of the class with different values. The default constructor initializes: 
+1.	All numeric fields in the class to zero.
+2.	All string and object fields to null.
+
+
+
+
+Parameterized Constructor in C#
+A constructor with at least one parameter is called a parameterized constructor. The advantage of a parameterized constructor is that you can initialize each instance of the class with a different value.
+
+
+
+
+
+
+Copy Constructor in C#
+The constructor which creates an object by copying variables from another object is called a copy constructor. The purpose of a copy constructor is to initialize a new instance to the values of an existing instance.
+
+
+
+
+Static Constructor in C#
+When a constructor is created using a static keyword, it will be invoked only once for all of the instances of the class and it is invoked during the creation of the first instance of the class or the first reference to a static member in the class. A static constructor is used to initialize static fields of the class and to write the code that needs to be executed only once.
+Some key points of a static constructor are: 
+1.	A static constructor does not take access modifiers or have parameters.
+2.	A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced.
+3.	A static constructor cannot be called directly.
+4.	The user has no control over when the static constructor is executed in the program.
+5.	A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.
+Private Constructor
+•	Private constructor is a special instance constructor which is used in a class that contains static member only.
+•	If a class has one or more private constructor and no public constructor, then other classes are not allowed to create instance of this class; this means you can neither create the object of the class nor can it be inherited by other classes.
+•	The main purpose of creating private constructor is to restrict the class from being instantiated when it contains every member as static. 
+
+ Destructor
+A destructor works opposite to constructor, It destructs the objects of classes. It can be defined only once in a class. Like constructors, it is invoked automatically.
+
+
+
+ Static Field
+A field which is declared as static, is called static field. Unlike instance field which gets memory each time whenever you create object, there is only one copy of static field created in the memory. It is shared to all the objects.
+It is used to refer the common property of all objects such as rate Of Interest in case of Account, company Name in case of Employee etc.
+ static class
+The C# static class is like the normal class but it cannot be instantiated. It can have only static members. The advantage of static class is that it provides you guarantee that instance of static class cannot be created.
+Points to remember for C# static class
+•	C# static class contains only static members.
+•	C# static class cannot be instantiated.
+•	C# static class is sealed.
+•	C# static class cannot contain instance constructors.
+•	
+static constructor
+C# static constructor is used to initialize static fields. It can also be used to perform any action that is to be performed only once. It is invoked automatically before first instance is created or any static member is referenced.
+Points to remember for C# Static Constructor
+o	C# static constructor cannot have any modifier or parameter.
+o	C# static constructor is invoked implicitly. It can't be called explicitly.
+ 
+This
+•	this is a keyword that refers to the current instance of the class. 
+•	There can be 3 main usage of this keyword in C#.
+•	It can be used to refer current class instance variable. It is used if field names (instance variables) and parameter names are same, that is why both can be distinguish easily.
+•	It can be used to pass current object as a parameter to another method.
+•	It can be used to declare indexers.
+
+_______________
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.SqlTypes;
+using System.Diagnostics.Contracts;
+using System.Reflection;
+using System.Security.Policy;
+
+namespace ConsoleApp20
+{
+    // para Constructor
+     class Program
+    {// class creation
+
+        static Program()
+        {
+            Console.WriteLine("Hello Static cons");
+        }
+        ~Program()// create class instance
+        {
+            Console.WriteLine("Destr");
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();    
+        }
+    }
+}
+  -------------------------
+  class - 10
+  -------------------------
+
+using System;
+
+
+namespace ConsoleApp21
+{
+    class demo
+    {
+        private  demo()
+        {
+            Console.WriteLine("he llo");
+        }
+        public    void dd()
+        {
+            Console.WriteLine("hello");
+        }
+ 
+        static void Main(string[] args)
+        {
+            demo demo = new demo();
+            demo.dd();
+        }
+    }
+}
+_______
+
+using System;
+
+
+namespace ConsoleApp21
+{
+    // Single level inher... 
+    // only one parent and one child 
+    public class Calculator // parent
+    {
+        public void Add()
+        {
+            Console.WriteLine("Hello Add");
+        }
+        public Calculator()
+        {
+            Console.WriteLine("hello cal const");
+        }
+    }
+    class Xyz:Calculator //child
+    {
+      
+
+        static void Main(string[] args)
+        {
+            Xyz xyz = new Xyz();    
+            xyz.Add();
+        }
+    }
+}
+_______
+using System;
+
+
+namespace ConsoleApp21
+{
+    // Single level inher... 
+    // only one parent and one child 
+    public class Calculator // parent
+    {
+        public void Add()
+        {
+            Console.WriteLine("Hello Add");
+        }
+       
+    }
+    class Xyz : Calculator //child
+    {
+        // Hello add
+        // Welcome to mY Page
+        public void Show()
+        {
+            // base 
+            Console.WriteLine("Hello Welcome");
+            base.Add();
+        }
+        static void Main(string[] args)
+        {
+            Xyz xyz = new Xyz();
+            xyz.Show();
+        }
+    }
+}
+________
+
+using System;
+
+
+namespace ConsoleApp21
+{
+    // Hierarchical  level inher... 
+    // only one parent and one child 
+    public class Calculator // parent
+    {
+        public void Add()
+        {
+            Console.WriteLine("Hello Add");
+        }       
+   
+    }
+    class A:Calculator
+    {
+        //public static void Main()
+        //{
+        //    A on = new A();
+        //    on.Add();
+        //}
+    }
+
+    class b:Calculator
+    {
+        public static void Main()
+        {
+            b on = new b();
+            on.Add();
+        }
+    }
+
+}
+_______
+using System;
+
+
+namespace ConsoleApp21
+{
+    // Multi-Level Inheritance  level inher... 
+    // only one parent and one child 
+    public class Calculator // parent
+    {
+        public void Add()
+        {
+            Console.WriteLine("Hello Add");
+        }       
+   
+    }
+    class A:Calculator
+    {
+        public A()
+        {
+            Console.WriteLine("Hello a");
+        }
+    }
+
+    class b:A
+    {
+        public static void Main()
+        {
+            b on = new b();
+            on.Add();
+        }
+    }
+
+}
+_______
+using System;
+
+
+namespace ConsoleApp21
+{
+    // Multi-Level Inheritance  level inher... 
+    // only one parent and one child 
+    public class Calculator // parent
+    {
+        public void Add()
+        {
+            Console.WriteLine("Hello Add");
+        }       
+   
+    }
+    class A:Calculator
+    {
+        public A()
+        {
+            Console.WriteLine("Hello a");
+        }
+    }
+
+    class b:A
+    {
+        public static void Main()
+        {
+            b on = new b();
+            on.Add();
+        }
+    }
+
+}
+____________
+
+using System;
+
+
+namespace ConsoleApp21
+{
+    // Maruti 
+    //  Ciaz 1.2
+    // std  16000  1.2/ no power stre/ no wheel co/ o music 
+    // std(o) // 1.2+power ste / power/ music/ wheel
+    // lxi // std+allow 4 poer
+    // lxiz 25000 lix+ dogc projecr bac cm sec
+
+
+    abstract class Seller
+    {
+        public abstract void Dashbord();
+        public abstract void Horn();
+        public void Seatcover()
+        {
+            Console.WriteLine("Hello");
+        }    
+    }
+    class maruti:Seller
+    {
+        public override void Dashbord()
+        {
+            Console.WriteLine("dash");
+        }
+        public override void Horn()
+        {
+            Console.WriteLine("prap prap");
+        }
+        public static void Main()
+        {
+            maruti maruti = new maruti();
+            maruti.Dashbord();
+            maruti.Horn();
+            maruti.Seatcover();
+        }
+    }
+
+}
+____________
+using System;
+
+
+namespace ConsoleApp21
+{
+    // virtual function
+    class Seller
+    {
+       
+        public virtual void horn()
+        {
+            Console.WriteLine("prap prap");
+        }    
+    }
+    class maruti:Seller
+    {
+        public override void horn()
+        {
+            base.horn();
+           Console.WriteLine("cow cow ");
+        }
+
+        public static void Main()
+        {
+            maruti maruti = new maruti();
+            maruti.horn();  
+       
+        }
+    }
+
+}
+_______
+What is a constructor in C#?
+A special method of the class that is automatically invoked when an instance of the class is created is called a constructor. The main use of constructors is to initialize the private fields of the class while creating an instance for the class. When you have not created a constructor in the class, the compiler will automatically create a default constructor of the class. The default constructor initializes all numeric fields in the class to zero and all string and object fields to null.
+
+Some of the key points regarding constructor are
+•	A class can have any number of constructors.
+•	A constructor doesn't have any return type, not even void.
+•	A static constructor can not be a parametrized constructor.
+•	Within a class, you can create one static constructor only. 
+In C#, constructors can be divided into 5 types
+1.	Default Constructor
+2.	Parameterized Constructor
+3.	Copy Constructor
+4.	Static Constructor
+5.	Private Constructor
+
+Default Constructor in C#
+A constructor without any parameters is called a default constructor; in other words, this type of constructor does not take parameters. The drawback of a default constructor is that every instance of the class will be initialized to the same values and it is not possible to initialize each instance of the class with different values. The default constructor initializes: 
+1.	All numeric fields in the class to zero.
+2.	All string and object fields to null.
+Parameterized Constructor in C#
+A constructor with at least one parameter is called a parameterized constructor. The advantage of a parameterized constructor is that you can initialize each instance of the class with a different value.
+Copy Constructor in C#
+The constructor which creates an object by copying variables from another object is called a copy constructor. The purpose of a copy constructor is to initialize a new instance to the values of an existing instance.
+Static Constructor in C#
+When a constructor is created using a static keyword, it will be invoked only once for all of the instances of the class and it is invoked during the creation of the first instance of the class or the first reference to a static member in the class. A static constructor is used to initialize static fields of the class and to write the code that needs to be executed only once.
+Some key points of a static constructor are: 
+1.	A static constructor does not take access modifiers or have parameters.
+2.	A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced.
+3.	A static constructor cannot be called directly.
+4.	The user has no control over when the static constructor is executed in the program.
+5.	A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.
+Private Constructor
+•	Private constructor is a special instance constructor which is used in a class that contains static member only.
+•	If a class has one or more private constructor and no public constructor, then other classes are not allowed to create instance of this class; this means you can neither create the object of the class nor can it be inherited by other classes.
+•	The main purpose of creating private constructor is to restrict the class from being instantiated when it contains every member as static. 
+
+ Destructor
+A destructor works opposite to constructor, It destructs the objects of classes. It can be defined only once in a class. Like constructors, it is invoked automatically.
+ Static Field
+A field which is declared as static, is called static field. Unlike instance field which gets memory each time whenever you create object, there is only one copy of static field created in the memory. It is shared to all the objects.
+It is used to refer the common property of all objects such as rate Of Interest in case of Account, company Name in case of Employee etc.
+ static class
+The C# static class is like the normal class but it cannot be instantiated. It can have only static members. The advantage of static class is that it provides you guarantee that instance of static class cannot be created.
+Points to remember for C# static class
+•	C# static class contains only static members.
+•	C# static class cannot be instantiated.
+•	C# static class is sealed.
+•	C# static class cannot contain instance constructors.
+•	
+static constructor
+C# static constructor is used to initialize static fields. It can also be used to perform any action that is to be performed only once. It is invoked automatically before first instance is created or any static member is referenced.
+Points to remember for C# Static Constructor
+o	C# static constructor cannot have any modifier or parameter.
+o	C# static constructor is invoked implicitly. It can't be called explicitly.
+ 
+This
+•	this is a keyword that refers to the current instance of the class. 
+•	There can be 3 main usage of this keyword in C#.
+•	It can be used to refer current class instance variable. It is used if field names (instance variables) and parameter names are same, that is why both can be distinguish easily.
+•	It can be used to pass current object as a parameter to another method.
+•	It can be used to declare indexers.
+
+
+Inheritance
+In C#, inheritance is a process in which one object acquires all the properties and behaviors of its parent object automatically. In such way, you can reuse, extend or modify the attributes and behaviors which is defined in other class.
+In C#, the class which inherits the members of another class is called derived class and the class whose members are inherited is called base class. The derived class is the specialized class for the base class.
+
+Advantage of C# Inheritance
+Code reusability: Now you can reuse the members of your parent class. So, there is no need to define the member again. So less code is required in the class
+
+
+
+
+Type of Inheritance
+Single Level Inheritance
+	In this type of inheritance, the derived class inherits properties and behavior from a single base class. It's like a child inherits the traits of his/her parents.
+Hierarchical Level Inheritance
+	In this type of inheritance, the multiple classes derives from one base class. It's like having multiple kids, all inheriting traits from parent, but in their own different ways.
+Multi-Level Inheritance
+	In this type of inheritance, a class inherits another derived/child class which in turn inherits another class. It's like a child inherits the traits of his/her parents, and parents inherit the traits of their grandparents.
+
+
+ Abstract
+Abstract classes are the way to achieve abstraction in C#. Abstraction in C# is the process to hide the internal details and showing functionality only. Abstraction can be achieved by two ways:
+1.	Abstract class
+2.	Interface
+Abstract class and interface both can have abstract methods which are necessary for abstraction.
+
+
+Abstract class
+In C#, abstract class is a class which is declared abstract. It can have abstract and non-abstract methods. It cannot be instantiated. Its implementation must be provided by derived classes. Here, derived class is forced to provide the implementation of all the abstract methods.
+Abstract Method
+A method which is declared abstract and has no body is called abstract method. It can be declared inside the abstract class only. Its implementation must be provided by derived classes.
+
+  -------------------------
+  class - 11
+  -------------------------
+
+What is a constructor in C#?
+A special method of the class that is automatically invoked when an instance of the class is created is called a constructor. The main use of constructors is to initialize the private fields of the class while creating an instance for the class. When you have not created a constructor in the class, the compiler will automatically create a default constructor of the class. The default constructor initializes all numeric fields in the class to zero and all string and object fields to null.
+
+Some of the key points regarding constructor are
+•	A class can have any number of constructors.
+•	A constructor doesn't have any return type, not even void.
+•	A static constructor can not be a parametrized constructor.
+•	Within a class, you can create one static constructor only. 
+In C#, constructors can be divided into 5 types
+1.	Default Constructor
+2.	Parameterized Constructor
+3.	Copy Constructor
+4.	Static Constructor
+5.	Private Constructor
+
+Default Constructor in C#
+A constructor without any parameters is called a default constructor; in other words, this type of constructor does not take parameters. The drawback of a default constructor is that every instance of the class will be initialized to the same values and it is not possible to initialize each instance of the class with different values. The default constructor initializes: 
+1.	All numeric fields in the class to zero.
+2.	All string and object fields to null.
+Parameterized Constructor in C#
+A constructor with at least one parameter is called a parameterized constructor. The advantage of a parameterized constructor is that you can initialize each instance of the class with a different value.
+Copy Constructor in C#
+The constructor which creates an object by copying variables from another object is called a copy constructor. The purpose of a copy constructor is to initialize a new instance to the values of an existing instance.
+Static Constructor in C#
+When a constructor is created using a static keyword, it will be invoked only once for all of the instances of the class and it is invoked during the creation of the first instance of the class or the first reference to a static member in the class. A static constructor is used to initialize static fields of the class and to write the code that needs to be executed only once.
+Some key points of a static constructor are: 
+1.	A static constructor does not take access modifiers or have parameters.
+2.	A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced.
+3.	A static constructor cannot be called directly.
+4.	The user has no control over when the static constructor is executed in the program.
+5.	A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.
+Private Constructor
+•	Private constructor is a special instance constructor which is used in a class that contains static member only.
+•	If a class has one or more private constructor and no public constructor, then other classes are not allowed to create instance of this class; this means you can neither create the object of the class nor can it be inherited by other classes.
+•	The main purpose of creating private constructor is to restrict the class from being instantiated when it contains every member as static. 
+
+ Destructor
+A destructor works opposite to constructor, It destructs the objects of classes. It can be defined only once in a class. Like constructors, it is invoked automatically.
+ Static Field
+A field which is declared as static, is called static field. Unlike instance field which gets memory each time whenever you create object, there is only one copy of static field created in the memory. It is shared to all the objects.
+It is used to refer the common property of all objects such as rate Of Interest in case of Account, company Name in case of Employee etc.
+ static class
+The C# static class is like the normal class but it cannot be instantiated. It can have only static members. The advantage of static class is that it provides you guarantee that instance of static class cannot be created.
+Points to remember for C# static class
+•	C# static class contains only static members.
+•	C# static class cannot be instantiated.
+•	C# static class is sealed.
+•	C# static class cannot contain instance constructors.
+•	
+static constructor
+C# static constructor is used to initialize static fields. It can also be used to perform any action that is to be performed only once. It is invoked automatically before first instance is created or any static member is referenced.
+Points to remember for C# Static Constructor
+o	C# static constructor cannot have any modifier or parameter.
+o	C# static constructor is invoked implicitly. It can't be called explicitly.
+ 
+This
+•	this is a keyword that refers to the current instance of the class. 
+•	There can be 3 main usage of this keyword in C#.
+•	It can be used to refer current class instance variable. It is used if field names (instance variables) and parameter names are same, that is why both can be distinguish easily.
+•	It can be used to pass current object as a parameter to another method.
+•	It can be used to declare indexers.
+
+
+Inheritance
+In C#, inheritance is a process in which one object acquires all the properties and behaviors of its parent object automatically. In such way, you can reuse, extend or modify the attributes and behaviors which is defined in other class.
+In C#, the class which inherits the members of another class is called derived class and the class whose members are inherited is called base class. The derived class is the specialized class for the base class.
+
+Advantage of C# Inheritance
+Code reusability: Now you can reuse the members of your parent class. So, there is no need to define the member again. So less code is required in the class
+
+
+Type of Inheritance
+Single Level Inheritance
+	In this type of inheritance, the derived class inherits properties and behavior from a single base class. It's like a child inherits the traits of his/her parents.
+Hierarchical Level Inheritance
+	In this type of inheritance, the multiple classes derives from one base class. It's like having multiple kids, all inheriting traits from parent, but in their own different ways.
+Multi-Level Inheritance
+	In this type of inheritance, a class inherits another derived/child class which in turn inherits another class. It's like a child inherits the traits of his/her parents, and parents inherit the traits of their grandparents.
+
+
+ Abstract
+Abstract classes are the way to achieve abstraction in C#. Abstraction in C# is the process to hide the internal details and showing functionality only. Abstraction can be achieved by two ways:
+1.	Abstract class
+2.	Interface
+Abstract class and interface both can have abstract methods which are necessary for abstraction.
+
+Abstract class
+In C#, abstract class is a class which is declared abstract. It can have abstract and non-abstract methods. It cannot be instantiated. Its implementation must be provided by derived classes. Here, derived class is forced to provide the implementation of all the abstract methods.
+
+
+
+Abstract Method
+A method which is declared abstract and has no body is called abstract method. It can be declared inside the abstract class only. Its implementation must be provided by derived classes. 
+
+
+Interface
+Interface in C# is a blueprint of a class. It is like abstract class because all the methods which are declared inside the interface are abstract methods. It cannot have method body and cannot be instantiated.
+It is used to achieve multiple inheritance which can't be achieved by class. It is used to achieve fully abstraction because it cannot have method body.
+Its implementation must be provided by class or strut. The class or strut which implements the interface, must provide the implementation of all the methods declared inside the interface.
+
+
+
+
+
+
+C# Encapsulation
+Encapsulation is the concept of wrapping data into a single unit. It collects data members and member functions into a single unit called class. The purpose of encapsulation is to prevent alteration of data from outside. This data can only be accessed by getter functions of the class.
+A fully encapsulated class has getter and setter functions that are used to read and write data. This class does not allow data access directly.
+
+C# Polymorphism
+The term "Polymorphism" is the combination of "poly" + "morphs" which means many forms. It is a greek word. In object-oriented programming, we use 3 main concepts: inheritance, encapsulation and polymorphism.
+
+
+
+There are two types of polymorphism in C#: compile time polymorphism and runtime polymorphism. 
+Compile time polymorphism is achieved by method overloading and operator overloading in C#. It is also known as static binding or early binding.
+ Runtime polymorphism in achieved by method overriding which is also known as dynamic binding or late binding.
+ 
+ 
+  -------------------------
+  class - 11 part -2
+  -------------------------
+  
+using System;
+
+
+namespace ConsoleApp23
+{
+    public interface Demo
+    {
+        void Add();
+    }
+    public interface Demo1:Demo
+    {
+        void Sub();
+    }
+    internal class Program:Demo1
+    {
+        public void Add()
+        {
+            Console.WriteLine("aDD FUNCTION");
+        }
+        public void Sub()
+        {
+            Console.WriteLine("Hello Sub");
+        }
+        static void Main(string[] args)
+        {
+            Program obj=new Program ();
+            obj.Sub();
+            obj.Add();
+        }
+    }
+}
+_______
+
+using System;
+
+
+namespace ConsoleApp23
+{
+    public interface Demo
+    {
+        void Add();
+    }
+    public interface Demo1
+    {
+        void Sub();
+    }
+    internal class Program:Demo1,Demo
+    {
+        public void Add()
+        {
+            Console.WriteLine("aDD FUNCTION");
+        }
+        public void Sub()
+        {
+            Console.WriteLine("Hello Sub");
+        }
+        static void Main(string[] args)
+        {
+            Program obj=new Program ();
+            obj.Sub();
+            obj.Add();
+        }
+    }
+}
+_______
+
+using System;
+
+
+namespace ConsoleApp23
+{
+    //1.	By changing number of arguments
+    internal class Program
+    {
+        // para / non par
+        public int Add(int a, int b)
+        {
+            if (a > b)
+            {
+                return a + b;
+            }
+            else
+            {
+                return a - b;
+            }
+        }
+        public int Add(int a, int b, int c)
+        {
+            if (a > b)
+            {
+                return a * c;
+            }
+            else
+            {
+                return a + b;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Program obj = new Program();
+            int a, num;
+            Console.WriteLine("Enter The First Number");
+            a = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Enter The Second Number");
+            num = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("First Fun :"+obj.Add(a, num));// call in two para
+            Console.WriteLine("Over load :"+obj.Add(a,num,10));//call in 3 para
+
+
+
+
+        }
+    }
+}
+____________
+
+using System;
+
+
+namespace ConsoleApp23
+{
+    //1.	2.	By changing data type of the arguments
+    internal class Program
+    {
+        // para / non par
+        public int Add(int a, int b)
+        {
+            if (a > b)
+            {
+                return a + b;
+            }
+            else
+            {
+                return a + b;
+            }
+        }
+        public float Add(float a, float b)
+        {
+            if (a > b)
+            {
+                return a - b;
+            }
+            else
+            {
+                return a - b;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Program obj = new Program();
+         //   decimal a, num;
+         ///   Console.WriteLine("Enter The First Number");
+          ////  a = Convert.ToDecimal(Console.ReadLine());
+          //  Console.WriteLine("Enter The Second Number");
+          //  num = Convert.ToDecimal(Console.ReadLine());
+            // 10 ,20
+            Console.WriteLine("First Fun :"+obj.Add(10,20));// call in two para
+            Console.WriteLine("Over load :"+obj.Add(1.0F,20));//call in 3 para
+
+
+
+
+        }
+    }
+}
+  -------------------------
+  class - 13
+  -------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+
+        int a, b, c;
+        public void Add()
+        {
+            try
+            {
+
+                Console.WriteLine("Enter The First No");// syntax error
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter The Second No");
+                b = Convert.ToInt32(Console.ReadLine());
+                c = a / b;  // logical error
+                Console.WriteLine("The Result is : " + c.ToString());
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Error code 404 ");
+                Console.WriteLine(ex.Message);
+                //Console.WriteLine(ex.StackTrace);
+                // Console.WriteLine(ex.Source);
+                //Console.WriteLine(ex.TargetSite);
+            }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine("Over flow");
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Divide flow");
+            }
+        }
+
+
+        static void Main(string[] args)
+        {
+
+            //  Exception
+            Program program = new Program();
+            program.Add();
+            Console.ReadLine();
+
+
+
+
+
+        }
+    }
+}
+________
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+
+        int a, b, c;
+        public void Add()
+        {
+            try
+            {
+
+                Console.WriteLine("Enter The First No");// syntax error
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter The Second No");
+                b = Convert.ToInt32(Console.ReadLine());
+                c = a / b;  // logical error
+                Console.WriteLine("The Result is : " + c.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Divide flow" + ex.Message);
+            }
+            finally
+            {
+                a = 0;
+             
+                Console.WriteLine(a);
+            }
+        }
+
+
+        static void Main(string[] args)
+        {
+
+            //  Exception
+            Program program = new Program();
+            program.Add();
+            Console.ReadLine();
+
+
+
+
+
+        }
+    }
+}
+________-
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+
+        int a, b, c;
+
+        public void logic()
+        {
+            try
+            {
+                c = a / b;  // logical error
+                Console.WriteLine("The Result is : " + c.ToString());
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+        public void Add()
+        {
+            try
+            {
+                // piece of code
+                Console.WriteLine("Enter The First No");// syntax error
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter The Second No");
+                b = Convert.ToInt32(Console.ReadLine());
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Divide flow" + ex.Message);
+            }
+            finally
+            {
+                a = 0;
+
+                Console.WriteLine(a);
+            }
+        }
+
+
+        static void Main(string[] args)
+        {
+
+            //  Exception
+            Program program = new Program();
+            program.Add();
+            program.logic();
+
+
+
+
+        }
+    }
+}
+___________
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+
+    public class InvalidException : Exception
+    {
+        public InvalidException(string message) : base(message)
+        { 
+        
+        }
+
+    }
+
+
+    internal class Program
+    {
+        public static void Add(int a)
+        {
+            if (a > 10 && a<20)
+            {
+                throw new InvalidException("Enter The valid number");
+            }
+            else if(a == 101)
+            {
+                throw new InvalidException("Enter The valid  101 number");
+            }
+            else
+            {
+                Console.WriteLine("Valid Number");
+            }
+        }
+ 
+        static void Main(string[] args)
+        {
+            try
+            {
+                int a;
+                Console.WriteLine("Enter The First No");// syntax error
+                a = Convert.ToInt32(Console.ReadLine());
+               Program.Add(a);// call for another class
+              //  Add(10);// call for same class
+            }
+            catch (InvalidException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
+  -------------------------
+  class - 14
+  -------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace IO
+{
+    internal class Program
+    {
+
+      static  FileStream fs;
+      static  StreamReader sr;
+        public static void ReadData()
+        {
+
+            try
+            {
+
+                //FileStream fs = new FileStream("E:\\Demo\\Abc.txt");
+                 fs = new FileStream(@"E:\Demo\Abc.txt", FileMode.Open, FileAccess.Read);
+                 sr = new StreamReader(fs);
+                sr.BaseStream.Seek(1, SeekOrigin.Begin);
+                string str = sr.ReadLine();
+                //Console.WriteLine(str);// read single line
+
+                while (str != null)
+                {
+                    Console.WriteLine(str);
+                    str = sr.ReadLine();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                sr.Close();
+                fs.Close();
+                Console.WriteLine("Hello finally");
+            }
+
+      
+
+        }
+
+        public static void WriteData()
+        {
+    FileStream fs = new FileStream("E:\\Demo\\Car.xlsx", FileMode.Create,FileAccess.Write);
+            StreamWriter sr = new StreamWriter(fs);
+            Console.WriteLine("Enter the text");
+            string str = Console.ReadLine();
+            sr.Write(str);
+            sr.Flush();
+            sr.Close();
+            fs.Close();
+
+
+        }
+        public static void Dirinfo()
+        {
+            DirectoryInfo Dinfo = new DirectoryInfo("C:\\Windows");
+            Console.WriteLine("Name " + Dinfo.Name);
+            Console.WriteLine("Full Name " + Dinfo.FullName);
+            Console.WriteLine("Last Acc Time " + Dinfo.LastAccessTime);
+            Console.WriteLine("Folder Extension " + Dinfo.Extension);
+            Console.WriteLine("Folder Write " + Dinfo.LastWriteTime);
+        }
+
+
+        public static void FileINfo()
+        {
+            DirectoryInfo Dnfo = new DirectoryInfo("E:\\Demo");
+            FileInfo[] filedir = Dnfo.GetFiles();
+
+            foreach (var Dinfo in filedir)
+            {
+                Console.WriteLine("Name " + Dinfo.Name);
+                Console.WriteLine("Full Name " + Dinfo.FullName);
+                Console.WriteLine("Last Acc Time " + Dinfo.LastAccessTime);
+                Console.WriteLine("Folder Extension " + Dinfo.Extension);
+                Console.WriteLine("Folder Write " + Dinfo.LastWriteTime);
+
+                Console.WriteLine("File Length " + Dinfo.Length);
+                Console.WriteLine("---------------------------------");
+
+            }
+        }
+        static void Main(string[] args)
+        {
+            FileINfo();        }
+    }
+}
+______
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to the calculator");
+            string cont = "Yes";
+            while (cont == "Yes")
+            {
+                Console.WriteLine("Enter the first number:");
+                float a = float.Parse(Console.ReadLine());
+                Console.WriteLine("Enter the second number:");
+                float b = float.Parse(Console.ReadLine());
+                Console.WriteLine("Choose operation:");
+                Console.WriteLine("1 - addition");
+                Console.WriteLine("2 - subtraction");
+                Console.WriteLine("3 - multiplication");
+                Console.WriteLine("4 - division");
+                int choice = int.Parse(Console.ReadLine());
+                float result = 0;
+                switch (choice)
+                {
+                    case 1:
+                        result = a + b;
+                        break;
+                    case 2:
+                        result = a - b;
+                        break;
+                    case 3:
+                        result = a * b;
+                        break;
+                    case 4:
+                        result = a / b;
+                        break;
+                }
+                if ((result > 0) && (choice < 5))
+                    Console.WriteLine("Result: {0}", result);
+                else
+                    Console.WriteLine("Invalid selection");
+                Console.WriteLine("Do you want to enter another example? [Yes/No]");
+                cont = Console.ReadLine();
+            }
+            Console.WriteLine("Thank you for using the calculator, you can close the application with any key.");
+            Console.ReadLine();
+        }
+    }
+}
+  -------------------------
+  class - 15
+  -------------------------
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add(20);
+            list.Add(30);
+            list.Add(40);
+            Console.WriteLine(list[0]);
+            Console.WriteLine(list[1]);
+            Console.WriteLine("Array Length "+list.Count);
+
+
+        }
+
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+_______
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add(20);
+            list.Add(30);
+            list.Add(40);
+            Console.WriteLine("Array Length "+list.Count);
+
+            for (int i = 0; i < list.Count; i++)
+            { 
+  Console.Write(list[i]+" ");
+                    
+            }
+            Console.WriteLine();
+        }
+
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+_______
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add("Car");
+            list.Add('A');
+            list.Add(40.12);
+            Console.WriteLine("Array Length " + list.Count);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.Write(list[i] + " ");
+
+            }
+            Console.WriteLine();
+        }
+
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+_________
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add("Car");
+            list.Add('A');
+            list.Add(40.12);
+            Console.WriteLine("Array Length " + list.Count);
+
+            foreach (object i in list)
+            {
+                Console.WriteLine(i);
+            }
+            //foreach (dynamic i in list)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            //foreach(var i in list)
+
+            //     Console.WriteLine(i);
+            // }
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+-
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add("Car");
+            list.Add('A');
+            list.Add(40.12);
+            list.Add(40.12);
+            Console.WriteLine("Array Length " + list.Count);
+
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+         
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+____________
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add("Car");
+            list.Add('A');
+            list.Add(40.12);
+            list.Add(40.12);
+            Console.WriteLine("Array Length " + list.Count);
+         
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+            //insert element
+            list.Insert(2, 96);
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+
+
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+__________
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add("Car");
+            list.Add('A');
+            list.Add(40.12);
+            list.Add(40.12);
+            Console.WriteLine("Array Length " + list.Count);
+         
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+            //Remove element
+            list.Remove("Car");
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+
+
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+_______
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add("Car");
+            list.Add('A');
+            list.Add(40.12);
+            list.Add(40.12);
+            Console.WriteLine("Array Length " + list.Count);
+         
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+            //Remove element
+            list.RemoveAt(3);
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+
+
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+
+________
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add("Car");
+            list.Add('A');
+            list.Add(40.12);
+            list.Add(20);
+            list.Add(20);
+            list.Add(50);
+            list.Add(90);
+            Console.WriteLine("Array Length " + list.Count);
+         
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+            //Remove element
+            list.RemoveRange(1,3);
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+
+
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+_________
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);
+            list.Add("Car");
+            list.Add('A');
+            list.Add(40.12);
+            list.Add(20);
+            list.Add(20);
+            list.Add(50);
+            list.Add(90);
+            Console.WriteLine("Array Length " + list.Count);
+         
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+            //Remove element
+            list.Clear();
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+            Console.WriteLine("Array Length " + list.Count);
+
+
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+_________
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);          
+            list.Add(210);
+            list.Add(120);
+            list.Add(500);
+            list.Add(90);
+            Console.WriteLine("Array Length " + list.Count);
+         
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+            //Remove element
+            list.Sort();
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+            Console.WriteLine("Array Length " + list.Count);
+
+
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+_________
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {// collection of object 
+            ArrayList list = new ArrayList();
+            // add elem  Add method 
+            // size shrink and grow
+            list.Add(10);          
+            list.Add(210);
+            list.Add(120);
+            list.Add(500);
+            list.Add(90);
+            Console.WriteLine("Array Length " + list.Count);
+         
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+            //Remove element
+            list.Sort();
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+            Console.WriteLine("Array Length " + list.Count);
+
+
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+_________
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {
+        // List <T>  Store and fetch // dublicate value avail
+
+            var Roll=new List<int>();
+            Roll.Add(10);
+            Roll.Add(10);
+            Roll.Add(40);
+            Console.WriteLine(Roll[0]);
+            foreach (var item in Roll)
+            {
+                Console.Write(item+" ");
+            }
+
+        
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+______
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {
+        // Hashset <T>  Store and fetch // (stop)dublicate value avail
+
+            var Roll=new HashSet<int>();
+            Roll.Add(10);
+            Roll.Add(10);
+            Roll.Add(40);
+           
+            foreach (var item in Roll)
+            {
+                Console.Write(item+" ");
+            }
+
+        
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+______
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {
+        // Sortedset <T>  Store and fetch // (stop)dublicate value avail
+
+            var Roll=new  SortedSet<int>();
+            Roll.Add(10);
+            Roll.Add(60);
+            
+            Roll.Add(40);
+
+            Roll.Add(40);
+            Roll.Add(30);
+            foreach (var item in Roll)
+            {
+                Console.WriteLine(item);
+            }
+
+        
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+
+______
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {
+        // Sortedset <T>  Store and fetch // (stop)dublicate value avail
+
+            
+             Dictionary<int, int> list = new Dictionary<int, int>();
+
+            list.Add(1,256);
+            list.Add(2, 257);
+
+            foreach ( KeyValuePair<int,int> obj in list )
+            {
+                Console.WriteLine(obj.Key+"    " + obj.Value);
+            }
+
+
+        }
+        static void Main(string[] args)
+        {
+
+            ArrayLists();
+        }
+    }
+}
+______
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace collection
+{
+    internal class Program
+    {
+
+        public static void ArrayLists()
+        {
+        // Sortedset <T>  Store and fetch // (stop)dublicate value avail
+
+            
+             Dictionary<int, int> list = new Dictionary<int, int>();
+
+            list.Add(1,256);
+            list.Add(2, 257);
+
+            foreach ( KeyValuePair<int,int> obj in list )
+            {
+                Console.WriteLine(obj.Key+"    " + obj.Value);
+            }
+
+        }
+
+
+        public static void Car()
+        {
+            Console.WriteLine("Data is loading pls waot ....");
+         
+            for (int i = 0; i < 10; i++)
+            {
+                   Thread.Sleep(2000);
+                Console.WriteLine(".");
+            }
+            Console.WriteLine("Bye");
+        }
+
+        static void Main(string[] args)
+        {
+            ThreadStart ts = new ThreadStart(Car);
+            Thread thread = new Thread(ts);
+            // unstarted state
+            // thread.Start();
+            // started state// runnable
+            // Thread.Sleep(5000); // not runnable state
+            //Console.WriteLine("Wake Up Thead");
+            Console.WriteLine("Hello Program");
+          //  thread.Abort();// kill the object 
+            thread.Start();
+            //Thread thread = Thread.CurrentThread;
+            //thread.Name = "Hello";
+            //Console.WriteLine(thread.Name);
+
+
+        }
+    }
+}
+_____
+
+C# Collections
+In C#, collection represents group of objects. By the help of collections, we can perform various operations on objects such as
+o	store object
+o	update object
+o	delete object
+o	retrieve object
+o	search object, and
+o	sort object
+In sort, all the data structure work can be performed by C# collections.
+We can store objects in array or collection. Collection has advantage over array. Array has size limit but objects stored in collection can grow or shrink dynamically.
+Types of Collections in C#
+There are 3 ways to work with collections. The three namespaces are given below:
+Skip Ad
+o	System.Collections.Generic classes
+o	System.Collections classes (Now deprecated)
+o	System.Collections.Concurrent classes
+
+
+
+
+
+
+
+
+
+1) System.Collections.Generic classes
+The System.Collections.Generic namespace has following classes:
+o	List
+o	Stack
+o	Queue
+o	LinkedList
+o	HashSet
+o	SortedSet
+o	Dictionary
+o	SortedDictionary
+o	SortedList
+2) System.Collections classes
+These classes are legacy. It is suggested now to use System.Collections.Generic classes. The System.Collections namespace has following classes:
+o	ArrayList
+o	Stack
+o	Queue
+o	Hashtable
+  -------------------------
+  class - 16
+  -------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.Threading;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+
+        public static void Add()
+        {
+            Console.WriteLine("Add Function ");
+            for (int i = 0; i < 10; i++)
+            {
+                Thread.Sleep(1000);
+                Console.Write("."+i);
+            }
+            Console.WriteLine("Wake up");
+        }
+
+        public static void Car()
+        {
+            Console.WriteLine("Car Function ");
+            Thread.Sleep(2000);
+            for (int i = 0; i < 50; i++)
+            {
+                Console.Write(i);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            ThreadStart ts = new ThreadStart(Add);
+            Thread thread = new Thread(ts);
+            thread.Start();
+
+            ThreadStart ts1 = new ThreadStart(Car);
+            Thread thread1 = new Thread(ts1);
+            thread1.Start();
+
+        }
+    }
+}
+___________
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.Threading;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+
+        public static void Add()
+        {
+            Console.WriteLine("Add Function ");
+            for (int i = 0; i < 10; i++)
+            {
+                // Thread.Sleep(1000);
+                Console.Write("A" + i);
+            }
+            Console.WriteLine("Wake up");
+        }
+
+        public static void Car()
+        {
+            Console.WriteLine("Car Function ");
+            //  Thread.Sleep(2000);
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("C" + i);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            
+            ThreadStart ts = new ThreadStart(Add);
+            Thread thread = new Thread(ts);
+
+            ThreadStart ts1 = new ThreadStart(Car);
+            Thread thread1 = new Thread(ts1);
+
+            thread1.Priority = ThreadPriority.Highest;
+            thread.Priority = ThreadPriority.Lowest;
+
+            thread1.Start(); // second
+            thread.Start(); // first
+           
+
+
+
+        }
+    }
+}
+______
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.Threading;
+using System.Diagnostics;
+
+namespace ConsoleApp4
+{
+     delegate int Cal(int n);   
+    internal class Program
+    {
+
+        static int number = 100;
+
+        public static int add(int n)
+        {
+            number = number + n;
+            return  number;
+        }
+        public static int Mul(int n)
+        {
+            number = number * n;
+            return number;
+        }
+
+        public static int get()
+        {
+            return number;
+        }
+
+        static void Main(string[] args)
+        {
+
+            Cal obj1 = new Cal(add);
+            Cal obj2 = new Cal(Mul);
+            obj1(50);
+            Console.WriteLine(get());
+            obj2(10);
+            Console.WriteLine(get());
+
+
+        }
+    }
+}
+_____
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.Threading;
+using System.Diagnostics;
+
+namespace ConsoleApp4
+{
+
+    public class Display
+    {
+        public static int Add { get; set; }
+    }
+   
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            Display.Add = 650;
+            Console.WriteLine(Display.Add);
+            Class1.car = 456;
+            Console.WriteLine(Class1.car);
+
+
+        }
+    }
+}
+  -------------------------
+  class - 17
+  -------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+
+
+        public enum Week {Mon,Tus,Wed,Thur,Fri,Sat,Sun };
+
+
+        static void Main(string[] args)
+        {
+
+             int a=(int)Week.Mon;
+            Console.WriteLine(a);
+
+            int b = (int)Week.Sun;
+            Console.WriteLine(b);
+            DateTime dt = new DateTime();
+            Console.WriteLine(DateTime.Now.DayOfWeek);
+
+                
+
+
+        }
+    }
+}
+________
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    delegate void MyDelegate();
+    //delegate int MyDelegate2(int b);
+
+    internal class Program
+    {
+        // multICASTE DELETE
+
+        static void Display()
+        {
+            Console.WriteLine("Shimla");
+        }
+        static void Output()
+        {
+            Console.WriteLine("Nanital");
+        }
+        static void Main(string[] args)
+        {
+            MyDelegate m1 = new MyDelegate(Display);
+            MyDelegate m2 = new MyDelegate(Output);
+            //m1();
+            //m2();
+            MyDelegate m3 = m1 + m2;
+            MyDelegate m4 = m3 + m2;
+            m4();
+
+        }
+    }
+}
+________
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+       internal class Program
+    {
+       
+        static void Main(string[] args)
+        {
+
+
+            string num = "ww";
+            Console.WriteLine(num);
+            Console.WriteLine(num.GetType());
+            Type type = typeof(int);
+            Console.WriteLine(type);
+            Type abd = num.GetType();
+            Console.WriteLine(abd);
+
+            Console.WriteLine();
+
+            Type obj = typeof(System.String);
+            Console.WriteLine(obj.Assembly);
+            Console.WriteLine(obj.BaseType);
+            Console.WriteLine(obj.IsEnum);
+            Console.WriteLine(obj.IsClass);
+
+
+
+
+        }
+    }
+}
+________
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+       internal class Program
+    {
+       
+        static void Main(string[] args)
+        {
+
+
+            string num = "ww";
+            Console.WriteLine(num);
+            Console.WriteLine(num.GetType());
+            Type type = typeof(int);
+            Console.WriteLine(type);
+            Type abd = num.GetType();
+            Console.WriteLine(abd);
+
+            Console.WriteLine();
+
+            Type obj = typeof(System.String);
+            Console.WriteLine(obj.Assembly);
+            Console.WriteLine(obj.BaseType);
+            Console.WriteLine(obj.IsEnum);
+            Console.WriteLine(obj.IsClass);
+
+        //Event Asp>net  
+        }
+    }
+}
+________
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+
+    public interface a
+    {
+        void add();
+    }
+    public interface b 
+    {
+        void Sub();
+    }
+
+    internal class Program : b,a
+    {
+        public void add()
+        { 
+        
+        }
+        public void Sub()
+        {
+
+        }
+
+        static void Main(string[] args)
+        {
+
+            //StringBuilder sb = new StringBuilder("Hello World");
+            //     Console.WriteLine(sb.ToString());
+
+            //     sb.Append("Welcome");
+            //     sb.Append("Welcome1");
+            //     sb.Append("Welcome2");
+            //     sb.Append("Welcome3");
+            //     sb.Append("Welcome4");
+            //     sb.Append("Welcome5");
+
+            //     Console.WriteLine(sb.ToString()+",");
+
+
+            //Random numberGen = new Random();
+            //int amountToOutput = 4;
+            //int minimumRange = 1;
+            //int maximumRange = 20;
+
+            //for (int i = 0; i < amountToOutput; i++)
+            //{
+            //    int randomNumber = numberGen.Next(minimumRange, maximumRange);
+            //    Console.WriteLine(randomNumber);
+            //}
+
+
+            Random ran = new Random();
+            
+
+            for (int i = 0; i < 10; i++)
+            {int a = ran.Next();
+      Console.WriteLine("The random number generated is: {0}", a);
+            }
+
+            Console.WriteLine(Guid.NewGuid());
+
+
+
+        }
+    }
+}

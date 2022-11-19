@@ -1,0 +1,1500 @@
+
+  -------------------------
+  class - 1
+  -------------------------
+
+--open editor  ctr+n  or alt+n
+-- run the applicatio  f5
+-- Type of statement
+-- DDL - data  definition language()object
+--DML  - data manupulation language()Record
+--DQl - data Query language
+--DCL - data control language
+
+-- her DDL>Dml> DQL
+-- Create only structure ( object B M)
+-- DDL - create,alter,drop,sp_rename etc
+-- record
+-- DML - insert,update,delete etc
+-- DQL - select 
+-- DB- collection of tables
+-- table - collection of row and col
+-- Db > Table > view
+-- How to Create DB
+create database SchoolERP
+-- how to open db
+use SchoolERP
+-- help db 
+sp_helpdb schoolerp
+--SchoolERP.mdf
+-- Rename Db
+sp_renameDb 'schoolerp',ERp
+sp_renameDb ERp ,ERPSchool
+sp_renameDb 'ERPSchool','Car'
+
+-- create table
+Create table Student
+(
+ StID int,
+ Name varchar(100),
+ Fee  decimal(18,2)  -- 12345678.11212
+)
+select * from Student
+-- rename table  name
+sp_rename Student,studs
+select * from Studs
+-- Add new Column in table
+alter table studs add mobile bigint
+-- drop the column
+alter table studs drop column mobile 
+-- help in table
+sp_help studs
+-- change datatype
+alter table studs alter column stid bigint
+-- rename column name
+sp_rename 'studs.stid',StudentId
+-- drop the table 
+drop table Studs
+select * from Studs
+-- drop db
+drop database Erp
+use flip
+-- find the all table in current db
+select * from sys.tables
+select * from product
+-- find the all db in system
+select * from sys.sysdatabases
+  -------------------------
+  class - 2
+  -------------------------
+
+-- record based logical model
+
+
+
+
+
+create table Emp
+( id int , Name varchar(100), Sal Decimal(18,2),
+ Inc money, Mobile bigint)
+ 
+ insert into Emp values(1,'Sachin',123.2564,65.014,98117111)
+ select* from Emp
+ -- multip 
+ insert into Emp values(2,'Arun',787878,6500,9814545),
+ (3,'Pankaj',787878,54545,78787)
+ select * from Emp
+ insert into Emp values(2,'Arun',787878,6500,78787)
+ delete from Emp where id=2
+ create Table Products
+(
+ Pid int identity,-- auto increment by default 1,1
+ Name varchar(100)
+)
+insert into Products values('Arun')
+select * from Products
+delete from Products where pid=2
+create table A
+(
+id int identity(100,2),
+Name varchar(100)
+)
+insert into A values('Sa')
+select * from a
+
+create table Emps
+(id int identity(1,1),
+Name varchar(100),Salary money,Tdate date,TTime time)
+insert into emps values('Arun',2561,getdate(),GETDATE())
+select * from Emps
+
+
+create  table B
+(
+ id int identity,
+ name varchar(100),
+ Addres nvarchar(max)
+)
+insert into b values('Sachin','Janak Puri')
+select * from b
+insert into b values(N'हेलो ',N'合理 ')
+insert into b(name)values('Sunny')
+update b set Addres='New delhi' where id=3
+update b set Addres='Cp',name='Nitin' where id=4
+select * from b
+delete from b where id=5
+truncate table b
+delete from b where  name='Sachin'
+delete from b
+truncate table b
+-- copy data 
+
+select name from b
+select name,id from b
+select * from b
+select * into xyz from b
+select * from xyz
+
+select NAme into x from b
+select * from x
+
+create table Stock
+(
+id int identity,Name varchar(50),Stock_In_out char,qunatity tinyint,
+Man_Date datetime)
+insert into Stock values('Car','0',80,GETDATE()),(
+'Tshirt','1',150,getdate()),('Shoe','1',100,getdate())
+select * from Stock where name='Car'
+select * from Stock where qunatity=100
+select * from Stock where qunatity>50
+select * from Stock where qunatity>=50
+select * from Stock where qunatity<150
+select * from Stock where qunatity<=150
+select * from Stock where qunatity!=150
+select * from Stock where qunatity=50 and name='toy'
+select * from Stock where qunatity=150 or name='toy'
+select * from Stock where qunatity in (12,50,104,3048,45,34,654,6,45,150,100,100)
+select * from Stock where qunatity not in (12,50,104,3048,45,34,654,6,45,150,100,100)
+select * from Stock where name not in ('toy','poko','Tshirt')
+select Name as 'FullName' from Stock
+select Name'FullName' from Stock
+select 'FullName'=Name from Stock
+select * from  stock where Name like 'To'
+select * from  stock where Name = 'To'
+select * from  stock where Name like 'T%'
+select * from  stock where Name like '%t'
+select * from  stock where Name like '%s%'
+select * from  stock where Name like 's_rt%'
+select MAX(qunatity) from  stock
+select MIN(qunatity) from  stock
+select SUM(qunatity) from  stock
+select AVG(qunatity) from  stock
+select COUNT(qunatity) from  stock
+SELECT nAME , LEN(NAME) FROM Stock  WHERE ID<15
+SElect top 2 * from Stock
+  -------------------------
+  class - 3
+  -------------------------
+
+select * from sys.tables
+select * from Stock
+-- Aggr max , min ,count ,sum ,avg
+-- count
+select count(name) from Stock
+-- min
+select min(qunatity) from Stock
+-- max
+select max(qunatity) from Stock where id between 1 and 9
+select * from Stock
+-- avg
+select avg(id) from Stock
+-- Sum
+select  sum( qunatity) from Stock
+select max(Name) from Stock
+select len(Name),name  from  Stock
+select * from Stock
+--ranking function
+-- rank
+select Name , Stock_In_out, qunatity,id from Stock
+insert into Stock values('Toy','1',100,GETDATE())
+
+select  RANK()over(order by Name asc) as 'Sno' ,Name , 
+Stock_In_out, qunatity,id from Stock
+
+-- Dense Rank 
+select  DENSE_RANK()over(order by Name asc) as 'Sno' ,Name , 
+Stock_In_out, qunatity,id from Stock
+-- Row Number
+select   row_number ()over(order by Name asc) as 'Sno' ,Name , 
+Stock_In_out, qunatity,id from Stock
+
+select   row_number ()over(order by Name asc) as 'Sno' ,Name , 
+Stock_In_out, qunatity,id from Stock where Stock_In_out in (1)
+-- Ntile
+select   ntile (3)over(order by Name asc) as 'Sno' ,Name , 
+Stock_In_out, qunatity,id from Stock
+
+
+
+--offset row count - no of row to skip
+select * from Stock order by id offset 2 rows
+--fetch  row count - no of fetch
+select * from Stock order by id offset 2 rows fetch next 3 rows only
+-- group by 
+select name from Stock group by name
+select name,count(name) from Stock group by name
+-- having clause
+select * from Stock
+select name,count(name) from Stock where id>8 group by name
+
+select name,count(id) from Stock  group by name having id>8
+
+select id from Stock  group by id having id>8
+
+select name,id from Stock
+  group by  name, id  having id between 1 and 9 
+  order by id asc
+
+  select name from Stock group by name order by name asc
+  select name,id from Stock
+  group by  name , id 
+-- subquery ,oper, join
+-- nested statement , query
+-- inner(generate logic) , outer (print data)
+
+  -------------------------
+  class - 4
+  -------------------------
+
+use car
+--Subquery nestes statement 
+-- inner(gener logic)  outer(print data)
+create table Marksheet
+( id int identity(1,1),
+ Name varchar(100), Section char,
+  grade  char, marks int)
+  insert into Marksheet values('Arun','A',
+  'A',96),('Sunil','c','b',91),('Pankaj','D','c',50),
+  ('Nitin','B','b',80)
+
+
+
+select Id ,Name,grade,Section from Marksheet
+-- SuBquery
+
+select* from Marksheet where Name=(
+select Name from Marksheet where id=4)
+
+
+select Id ,Name,grade,Section from Marksheet
+-- First topper
+select Max(marks) from Marksheet
+-- Second Topper(SAchin)
+select Max(marks) from Marksheet 
+where marks not in(select Max(marks) from Marksheet)
+--or 0 - 95
+select Max(marks) from Marksheet 
+where marks <(select Max(marks) from Marksheet)
+-- Third hig
+
+select Max(marks) from Marksheet 
+where marks <(select Max(marks) from Marksheet where 
+marks<(select Max(marks) from Marksheet))
+
+select NAme  from  Marksheet where marks=(
+select Max(marks) from Marksheet 
+where marks <(select Max(marks) from Marksheet where 
+marks<(select Max(marks) from Marksheet)))
+
+--find the high 3 value
+select *  from  Marksheet where marks>=(
+select Max(marks) from Marksheet 
+where marks <(select Max(marks) from Marksheet where 
+marks<(select Max(marks) from Marksheet)))
+
+ -- modified opera  =Any  =All >all   > any <>all
+select * from  Marksheet
+create table first 
+(
+ id int identity(1,1),
+ name varchar(100)
+)
+insert into First(name) values('Sunil'),('Arvind')
+create table Second
+(
+ id int identity(1,1),
+ name varchar(100)
+)
+insert into Second(name) values('Sunil'),('Pankaj'),('Manish'),('Ankit')
+select * from Second
+select * from first
+select * from second where id=(
+ select max(id) from first
+)
+1 > , >=
+select * from second where id>All(select id from first)
+select * from second where id>(select max(id) from first)
+select * from second where id>Any(select id from first)
+select * from second where id<>All(select id from first) -- !=<>
+select * from second where id<>Any(select id from first)
+select * from second where id=Any(select id from first)
+
+select * from first
+select * from second where exists
+(select id from first where name='Sunil') order by name desc
+-- interset
+  -------------------------
+  class - 5
+  -------------------------
+
+-- join  merge the table
+-- combine the table min 2 and max has no limit
+-- Table / column 
+-- Data type
+
+--Stude
+--ID int  Name string
+
+--Emplo 
+--Id int  Emp str  mobile  bigint
+-- tiny int , 
+
+
+--int - decm
+--113   - 123
+--112.3   11..
+
+select * from second
+create table fee
+(
+ Rollno int ,
+ Fee money,
+ Tdate date
+)
+
+insert into fee values(1,5000,GETDATE()),
+(3,6000,GETDATE()),(1,2000 , getdate())
+
+select * from Second
+select * from fee
+-- join
+-- type of join 
+-- inner join
+-- outer join
+	--  left out jo , right out joi , Full out join
+-- equi join
+-- self join
+-- cross join
+-- struct of join
+-- Select [*]/[column list] from t1_name [type of join] t2_name on t1.col_name=t2.col_name
+-- inner join
+-- print only common record for both table ( based on condition
+select * from  second inner join fee on id=Rollno
+
+select Rollno,Name,Fee,Tdate from  second inner join fee on id=Rollno
+
+select ROW_NUMBER()over(order by Rollno)as 'Sno',Name,Fee,Tdate,Rollno
+ from  second inner join fee on id=Rollno 
+
+ 
+select ROW_NUMBER()over(order by Rollno)as 'Sno',Name,Fee,Tdate,Rollno
+ from  second inner join fee on id=Rollno  where tdate='2022-10-12'
+
+ select ROW_NUMBER()over(order by Rollno)as 'Sno',Name,Fee,Tdate,Rollno
+ from  second inner join fee on id=Rollno  where tdate between '2022-10-1' and '2022-10-12'
+
+-- outer join
+-- left outer join ( print all record for left table and matching record print only right
+select * from  second left outer join fee on id=Rollno
+
+create table Marks
+(
+ Mid int ,
+ Stud_marks bigint
+)
+insert into Marks values(1,90),(2,60),(4,50)
+select * from Second
+select * from Fee
+select * from Marks
+select * from  second inner join fee on id=Rollno inner join Marks on id=Mid
+
+select * from  second left outer join fee on id=Rollno left outer join Marks on Rollno=Mid
+1,3 = 1,2,4
+
+-- right outer join
+select * from  second right outer join fee on id=Rollno 
+-- full outer join
+select * from  second full outer join Marks on id=Mid
+sec - 1234  m - 124
+
+select * from  second full  join Marks on id=Mid
+
+-- self join  itself
+select * from Second s inner join Second j on s.id=j.id
+select j.id,s.name from Second s inner join Second j on s.id=j.id
+-- cross join
+select * from Second  cross join   first
+select * from first
+--10 cross 2=20
+select * from first  cross join   second
+-- equi
+  -------------------------
+  class - 6
+  -------------------------
+
+-- equi 
+
+-- Constraint
+-- type of constraint
+-- Not null
+-- Primary key,
+-- Foreign key ,
+-- Uniqe
+-- Default
+-- Check
+-- int Roll   contraint name / type of Cons
+
+-- not null
+create table Abc
+( id int , -- by default null
+ Name varchar(100) not null, Salary bigint null)
+
+ insert into Abc values(1,'Sunil',56) 
+ insert into Abc(Name,Salary) values('Sunil',56)
+ select * from Abc
+ insert into Abc(Salary) values(56)
+
+ -- Primary  Key 
+ -- Direct call 
+ -- dot not enter  Dublicate value 
+ -- unique data 
+ -- call any datatype
+ -- c't null
+ create table APk
+ (
+  id int primary key,
+  Name varchar(100)
+ )
+ Insert into APk(id,Name)values(2,'Sunil')
+ select * from APk
+ 
+ Insert into APk(Name)values('Sunil') 
+--Violation of PRIMARY KEY constraint 'PK_APk_3213E83F7FED1AB8'.
+-- Cannot insert duplicate key in object 'dbo.APk'. The duplicate key value is (1).
+--The statement has been terminated.
+
+sp_help 'APK'
+
+
+create table b1
+(
+ id int constraint b_Primarykey primary key,
+ Name varchar(100)
+)
+insert into b1(Name)values('ss')
+sp_help b1
+create table b12
+(
+ id int constraint b_Primaryqkey primary key, Name varchar(100)
+)
+
+
+create table b1
+(
+ id int constraint b_Primarykey primary key,
+ Name varchar(100)
+)
+select * from b1
+insert into b1 values(12,'Sachiin'),(2,'Anil')
+
+create table bFee(
+ FId int identity(1,1) primary key,
+ Famt money,
+ Tmonth date,
+ b_Id int  foreign key references b1(id)  
+)
+insert  into bFee values(000,GETDATE(),1)
+select * from bFee
+-- equi join
+ select * from bfee f inner join b1 obj on  f.b_Id=obj.id
+
+-- unique
+create table c
+(
+ id int ,
+ name varchar(100) unique 
+)
+insert into c values(3,'Anil 1')
+select * from c
+update c set name='ss' where id=1
+insert into c(id) values(4)
+
+create table D
+(
+ id int not null primary key,
+ name  int not null unique
+)
+insert into D(name) values(1)
+
+--defaut
+create table D1
+(
+ id int ,
+ name   varchar(100),
+ Tadte date default getdate()
+)
+
+insert into d1(id,name) values(1,'aaa')
+select * from d1
+
+--check
+
+create table j
+(
+ id int ,
+ name varchar(100) constraint jjj check(name in ('arun','Pankaj')) 
+ name varchar(100) constraint jjj check(name between 10 and 23)
+)
+INSERT  INTO J VALUES(1,' SUNIL')
+
+
+
+
+
+
+
+
+
+
+
+
+--ALTER TABLE Persons
+--ADD CONSTRAINT PK_Person PRIMARY KEY (ID,LastName);
+  -------------------------
+  class - 7
+  -------------------------
+
+create table Emp1
+(
+id int ,
+name varchar(100)
+)
+select * from Emp1
+-- Create Rule
+create rule  Rule11
+as
+@name in ('Sunny','Amit')
+
+-- bind Rule
+sp_bindrule 'Rule11','Emp1.name'
+insert into Emp1 values(4,'Nitin')
+select * from  Emp1
+sp_unbindrule 'Emp1.name'
+drop rule rule11
+-- create datatype
+create type zozo from varchar(6) not null
+
+create table Emp2
+( id int , name zozo )
+insert into Emp2 values(1,'zozo zozo')
+
+-- store procedure  (SP)
+Create table Guess
+( id int identity primary key ,
+Name varchar(100),
+Roll Bigint
+)
+insert into Guess Values('Anil',95),('Nitin',85),('Neelam',78)
+select * from Guess
+ --create proc _Select_Guess
+--  variable
+--  @Rollno datatye
+ --as
+ --begin
+ -- Statement
+ --end
+
+ -- Select 
+ create proc _select_guess
+ as
+ begin
+ select * from Guess
+ end
+ -- run the sp
+ exec _select_guess
+  _select_guess
+
+ alter proc _select_guess
+ as
+ begin
+ select Name,Roll from Guess
+ select * from Guess
+ end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exec _select_guess
+sp_help '_select_guess'
+sp_helptext '_select_guess'
+ alter proc _select_guess
+ as
+ begin
+ select * from Guess
+ end
+
+ alter proc _Filter
+ @search varchar(100)
+ as
+ Begin
+  select * from guess where name like '%'+@search+'%' or Roll like '%'+@search+'%'
+  end
+ exec _Filter ''
+
+ create proc _insert
+ @name varchar(100),
+ @Xyz int
+ as
+ begin  
+ insert into guess values(@name,@Xyz)
+ end
+exec _insert 'Jack',007
+exec _select_guess
+
+Create proc _update
+@name varchar(100),
+@Roll varchar(100),
+@id int
+as
+begin
+update guess set Name=@Name , Roll =@Roll where id=@id
+exec _select_guess
+end
+exec _update 99,'Anil Kuamr',2
+
+select * from sys.tables
+select * from sys.procedures
+
+
+alter proc _join
+@action varchar(100)
+as
+begin
+	if(@action='A')
+	begin
+	select * from guess i inner join guess s  on i.id=s.id
+	End
+	else if(@Action='C')
+	begin
+	end
+end
+exec _join 'A'
+  -------------------------
+  class - 8
+  -------------------------
+
+-- Project SChoolM Erp Ecom
+ --Stock  Hospital  , tour_travel
+ 
+ -- Module   College
+ --  Admin 
+ --  staff Dep ( clean, manager, rec, acc, call
+ --  Account dep
+ --  Library
+ --  ManageRoom
+ --  Student
+
+ -- Admin 
+   ---- C R U D ( Manage All Roles
+   --- Staff 
+			---Add/Update/Delete/List
+			-- Role ( Clea,Acc,rec etc)
+			-- Rec - Add/ U/De /serach/dis
+			
+   ---- Account
+   ---- Recpet -  Login- Search
+   create database Erp
+   use Erp
+   create table AdminUser
+   (
+   userid  int identity(1,1) constraint obj primary key,
+   UserName nvarchar(100) not null,
+   Email nvarchar(100) not null unique,
+   Mobile bigint not null,
+   Pass nvarchar(100) not null,
+   UserCode uniqueidentifier default newid(),
+   Creation_Date Date default getdate(),
+   Last_Modif_Date Date default getdate(),
+   Last_Modif_Time time default getdate()
+   )
+   insert into AdminUser(UserName,Email,Mobile,Pass)values('Nitin','Nitin@gmail.com',9811702004,123456)
+   select * from AdminUser where UserCode='C56CD2D0-5600-40CE-A739-0618DC6E6E1E'
+
+   create table userRoles
+   (
+   userRolesid  int identity(1,1) constraint obja primary key,
+   RoleName nvarchar(100) not null,  
+   RoleCode uniqueidentifier default newid(),
+   RoleMode char default '0' ,-- not visible
+   AdminUserID int foreign key references AdminUser(userid),
+   Creation_Date Date default getdate(),
+   Last_Modif_Date Date default getdate(),
+   Last_Modif_Time time default getdate()
+   )
+   insert into userRoles(RoleName,AdminUserID)values('SubAdmin',1),('Acc',1),('Std',1)
+   select * from userRoles
+
+   create table Staff
+   (
+    userid  int identity(1,1) constraint obwj primary key,
+   UserName nvarchar(100) not null,
+   Email nvarchar(100) not null unique,
+   Mobile bigint not null,
+   Pass nvarchar(100) not null,
+    AdminUserID int foreign key references AdminUser(userid),
+	RoleUserID int foreign key references userRoles(userRolesid),
+   UserCode uniqueidentifier default newid(),
+   Creation_Date Date default getdate(),
+   Last_Modif_Date Date default getdate(),
+   Last_Modif_Time time default getdate()
+   )
+   insert into Staff(UserName,Email,Mobile,Pass,AdminUserID,RoleUserID)values(
+    'Nitin','Nitin@gmail.com',989898,9281,1,4)
+	select * from Staff
+	-- course
+		-- Type of cour
+		-- stanad / semi
+		-- stand - 1 1/2
+
+create table Course_cate
+(
+  courseid  int identity(1,1) constraint obqwj primary key,
+   CourseType nvarchar(100) not null,  
+    AdminUserID int foreign key references AdminUser(userid),
+	staffUserID int foreign key references staff(userid),
+   UserCode uniqueidentifier default newid(),
+   Creation_Date Date default getdate(),
+   Last_Modif_Date Date default getdate(),
+   Last_Modif_Time time default getdate()
+)
+insert into Course_cate(CourseType,AdminUserID,staffUserID)values('Semister',1,2)
+select  * from Course_cate
+update Course_cate set CourseType='Sem', Last_Modif_Time = getdate()
+ where courseid=1
+  -------------------------
+  class - 9
+  -------------------------
+
+use erp
+-- backup create upload
+-- mig
+-- script
+-- db attach and detach
+--detach
+use car
+Msg 911, Level 16, State 1, Line 7
+Database 'car' does not exist. 
+Make sure that 
+the name is entered correctly.
+-- find all Db location
+--C:\Program Files\Microsoft SQL Server
+--\MSSQL12.MSSQLSERVER\MSSQL\DATA
+-- MDF log
+-- 17  17.0
+ --drop database DataLists
+ -- TRIGGER
+ -- MAGIC TABLE 
+  SELECT * FROM inserted 
+
+  create table St
+  (
+   id int ,
+   name varchar(100)
+  )
+
+insert into st values(1,'sachin')
+
+create trigger trg 
+on st
+after update
+as
+begin
+select * from inserted
+select * from deleted
+end
+
+select * from st
+update st set name='Kumar1' where id=1
+Select * FROM sys.fn_dblog(NULL,NULL)
+
+alter trigger trg1 on st 
+for insert
+as
+begin
+declare @id int
+ select @id=id from inserted
+  if(@id> 40)
+  begin
+    begin transaction
+	print 'not insteted'
+	rollback transaction
+  end
+  else
+  print 'record inserted'
+end
+insert into st values(121,'Car')
+select * from st
+
+create trigger  trgr on
+st after delete
+as
+print'record is Deleted'
+
+delete from st where id=1
+Disable trigger trgr on st
+Enable trigger trgr on st
+
+se
+
+  -------------------------
+  remaining class
+  -------------------------
+--Trigger->A trigger are a special kind of stored procedures, which are fired in response
+--to an action,such as insert ,update or delete.
+-----------------------------Type of Trigger-------------
+--1.DML (Insert,Update,Delete)
+--2.DDL (Create and Alter)
+create database lm
+use lm
+ create table vikram(id int,name varchar(50),marks int)
+ ------insert values in the table-------
+insert into vikram values(2,'Amit',100)
+
+-------Magic tables-------
+create trigger trg on vikram
+after update
+as
+begin
+select * from inserted 
+select * from deleted 
+end
+
+-----update record--------
+update vikram set name='suman' where id=1
+
+----------for insert trigger-----------
+create trigger trg2 
+on vikram
+for insert
+as
+begin 
+declare @id int
+select @id=id from inserted
+if(@id>50)
+begin 
+print 'id cannot be more than 50'
+ rollback transaction
+end
+else
+print 'record inserted'
+end
+
+insert into vikram values(2,'Amit',100)
+---------After trigger---------
+create trigger trg3 on vikram
+after delete
+as print 'delete record sucessfully'
+------insert values--------
+insert into vikram values(22,'hellen',122)
+select * from vikram
+delete from vikram where  id=50
+
+------Alter Trigger-----
+alter trigger trg3 on vikram
+after delete 
+as
+print 'one record deleted'
+
+delete from vikram where  id=22
+
+------Deleting Trigger------
+drop trigger trg
+
+select * from vikram
+update vikram set name='suman' where id=1
+----------Disabling a Trigger---
+Disable trigger trg3 on vikram
+
+-----------Enabling a trigger--------
+Enable trigger trg3 on vikram
+---------------------------------------------End trigger-------------------
+----------------------Transaction-----------
+--Transaction are used to execute a sequence of statements together as a single
+-- logical unit of work.(Every transaction prosses the ACID property).
+--Type of transaction---
+--1.Autocommit(Default tran) 
+--2.Implicit Transaction(Do not need start tran define only commit or roolback).
+--3.Explicit transaction(Define start and end of tran).
+create table amit(id int,name varchar(22))
+insert into amit values(1,'lalmuni')
+select * from amit
+
+--transaction--
+begin transaction
+begin try
+insert into amit  values(2,'kishore ji')
+commit transaction
+print 'transaction commited'
+end try
+begin catch
+rollback transaction
+print 'transaction rollback'
+end catch
+
+--isolation transaction(You donot want any other tran. to read the uncommitted record)
+set transaction isolation level read committed
+begin transaction
+begin try
+update amit set name='srimanta panda' where id=2
+commit transaction
+print 'transaction commited'
+end try
+begin catch
+rollback transaction
+print 'transaction rollback'
+end catch
+select *from amit
+---------------------------
+
+
+
+
+CREATE FUNCTION udfNet_Sales(  
+    @quantity INT,  
+    @price DEC(10,2),  
+    @discount DEC(3,2)  
+)  
+RETURNS DEC(10,2)  
+AS   
+BEGIN  
+    RETURN @quantity * @price * (1 - @discount);  
+END;   
+
+
+--- Creating batches
+
+create table vivek(id int,name varchar(22))
+create table vishal(id int,name varchar(22),marks int,rate money)
+
+insert into vivek values(1,'amit')
+insert into vivek values(2,'vikram')
+insert into vivek values(3,'Rahul')
+insert into vishal values(1,'Pankaj',100,12)
+insert into vishal values(2,'vishal',22,120)
+update vishal set name='Ram' where id=2
+go
+select *from vivek
+select *from vishal
+
+--Using Variables
+Declare @Rate int
+select @Rate = max(rate)
+from vishal
+Go
+--Displaying a user defined message
+Declare @Rate int
+select @Rate = max(rate)
+from vishal
+Print @rate
+GO
+
+Declare @Rate int
+select @Rate = max(rate)
+from vishal
+Print 'Maximum rate is ' + convert(varchar,@rate)
+GO
+
+print 'hello world'
+
+--using Constructs
+
+
+--Using if else statement
+declare @Rate money
+select @Rate =  rate from vishal
+where id = 2
+if 
+@Rate < 15
+	Print 'Rate is less than 15'
+else
+Begin
+	Print 'Rate is greater than 15'
+	Print 'Rate='
+	Print @rate
+end
+go
+
+
+
+if exists (select * from vishal where name = 'Pankaj')
+begin
+select * from vishal where name = 'Pankaj'
+end
+else
+	Print 'Name  details not available'
+Go
+
+
+
+-- Using the case statement
+
+select EmployeeId, 'Marital Status' =
+case MaritalStatus
+	when 'M' then 'Married'
+	when 'S' then 'Single'
+	else 'Not Specified'
+end
+from humanResources.Employee
+go
+
+select EmployeeID, MaritalStatus from HumanResources.Employee
+---OR---------
+--example 1
+DECLARE @TestVal int
+set @TestVal=3
+SELECT
+CASE @TestVal
+			when 1 then 'First'
+			when 2 then 'Second'
+			when 3 then 'Third'
+			else 'Other'
+end
+go
+
+--example 2
+use batchdb
+create table product(productname char(20),unitprice float)
+insert into product values('Chai',20.67)
+insert into product values('Coffee',25.67)
+insert into product values('Pulses',18)
+insert into product values('Rice',15.60)
+insert into product values('Fruits',50.50)
+insert into product values('Fruits',null)
+select * from product
+
+select 'Comment'=
+case
+   when unitprice is null then 'No price mentioned'
+   when unitprice >20 and unitprice <30 then 'Reasonable price'
+   when unitprice <20 then 'low price'
+   else 'EXPENSIVE !!!'
+end,
+productname,unitprice from product
+GO
+
+            OR
+
+select productname,unitprice, 'Comment'=
+case
+   when unitprice is null then 'No price mentioned'
+   when unitprice >20 and unitprice <30 then 'Reasonable price'
+   when unitprice <20 then 'low price'
+   else 'EXPENSIVE !!!'
+end
+ from product
+GO
+
+
+--using the while statements
+--Example 1 
+--Use WHILE Loop to insert data to table
+
+create table employees(id int, name char(20))
+
+DECLARE @Counter int
+set @Counter=1
+   
+      WHILE @Counter <= 50 
+        BEGIN
+        INSERT INTO employees (id) VALUES (@Counter)
+       set @Counter = @Counter + 1
+      END 
+
+--Example 2
+
+while(select avg(rate)+1 from vishal)<68
+begin
+	update vishal
+	set rate = rate + 1
+	from vishal
+	if(select max(rate)+1 from vishal)> 127
+break
+else
+continue
+end
+
+select  avg(rate )from vishal
+
+
+-- handling errors & exceptions
+
+-- using TRY - Catch
+create table emp1(id int identity(1,1),name char(20),empcode char(12))
+create table emp2(id int,empname char(20))
+
+BEGIN TRY
+	insert into emp1(id,name,empcode) values(1,'SAM','E001')
+	insert into emp2 values(4,'E001')
+END TRY
+BEGIN CATCH
+	SELECT 'THERE WAS AN ERROR! '+ERROR_MESSAGE() AS ErrorMessage,
+	ERROR_LINE() AS ErrorLine,
+    ERROR_NUMBER() AS ErrorNumber,
+	ERROR_PROCEDURE() AS ErrorProcedure,
+	ERROR_SEVERITY() AS ErrorSeverity
+END CATCH
+GO
+
+
+-- using raiseError
+create table Shift(ShiftID int, empname char(20),StartTime datetime, EndTime datetime)
+insert into Shift values(1,'Sam','2012-02-26 1:05:30','2012-02-26 5:05:30')
+insert into Shift values(2,'Sneha','2012-02-26 15:00:00','2012-02-27 12:00:00')
+insert into Shift values(3,'Sahil','2012-02-25 23:00:00','2012-02-26 06:00:00')
+select * from shift
+
+
+BEGIN TRY
+	DECLARE @Start datetime
+	DECLARE @End   datetime
+	DECLARE	@Date_diff int
+SELECt @Start='2012-03-01 9:00:00', @End='2012-03-01 12:00:00'
+SELECT @Date_diff=datediff(hh,@Start,@End)
+IF(@Date_diff !=8)
+  RAISERROR('Error Raised',16,1)
+ELSE
+BEGIN
+   update Shift
+	set StartTime=@Start,EndTime=@End
+	where ShiftID=3
+END
+END TRY
+BEGIN CATCH
+	PRINT 'The difference between the STartime and EndTime should be 8 hours'
+END CATCH
+GO
+
+------------OR---------------
+Begin try
+declare @Start datetime
+Declare @End datetime
+declare @Date_diff int
+
+select @Start = '1900-01-01 23:00:00.000', @End = '1900-01-02 06:00:00.000'
+
+select @date_diff = datediff(hh, @start, @End)
+if(@Date_diff !=8)
+	raisError('Error Raised', 16, 1)
+else
+Begin
+update HumanResources.shift
+set starttime = @start, EndTime = @End
+where ShiftId =3
+end
+end try
+begin catch
+	Print 'The differece between the start and end time should be 8 hours'
+end catch
+go
+
+
+-- implementing stored procedure--------------
+
+-- Creating Stored Procedure
+Create Procedure prcDept
+as
+begin 
+select name FROM vishal
+end
+
+
+sp_helptext prcDept
+
+
+
+-- executing a stored procedure
+Exec prcDept
+
+--or 
+
+prcDept
+
+
+
+-- Altering a Stored Procedure
+alter procedure prcDept
+as
+Begin
+select id, name from vishal
+end
+
+
+
+-- dropping a stored procedure
+drop procedure prcDept
+
+
+-- Creating a parameterized Stored Procedure(set condition using this)
+
+Create proc vishalPro @title char(50)
+as 
+begin
+	print 'List of Employees'
+	select id,name,marks
+	from vishal
+	where marks = @title
+end
+
+
+execute vishalPro '12'
+-- or
+execute vishalPro @title = '200'
+
+drop procedure prcListEmployee
+
+-----Returning values from STored Procedure
+create table contact(ContactID int, FirstName char(20),LastName char(20))
+insert into contact values(1,'Sam','Sharma')
+insert into contact values(2,'Sneha','Gupta')
+insert into contact values(3,'Sonu','Chaudhary')
+
+CREATE PROCEDURE prcGetContact @ContactID int, @FirstName char(20) output, @LastName char(20) output
+AS
+BEGIN
+ select @FirstName=FirstName,@LastName=LastName
+ from contact
+ where ContactID=@ContactID 
+END
+
+
+declare @frtname char(20),@lstname char(20)
+exec prcGetContact 
+     @ContactID=1,
+	@FirstName=@frtname output,
+    @LastName=@lstname output
+select FirstName=@frtname,LastName=@lstname
+----------------Detail of procedure----------
+select *from Sysobjects
+
+-- implementing functions
+--UDF(User Defined Functions)
+--1. Creating Scalar Function
+create function myfun(@Rate float)
+returns float
+as
+begin
+ return(@Rate*8*30)
+end
+
+
+--execute function
+declare @Rate float
+set @Rate=dbo.myfun(10.2)
+print @Rate
+
+--2) Creating Table -Valued Functions
+--(i)inline table valued function
+      
+     create function fn(@Grpname varchar(20))
+     returns table
+     as
+      return
+			(
+              select * from contact
+			  where LastName=@Grpname
+             )
+    GO
+
+select * from fn('Sharma')
+
+--(ii) multistatement table-valued function
+  create table employee(ID  int, name varchar (10),salary int)
+
+insert into employee (ID, name, salary)values (1,  'Jason', 40420)
+insert into employee (ID, name, salary)values (2,  'Robert',14420)
+insert into employee (ID, name, salary) values (3,  'Celia', 24020)
+
+
+select * from employee
+
+CREATE FUNCTION myProc (@ID Int)
+   RETURNS @EmployeeList Table
+    (  ID     Int
+     , Name   nVarChar(50)
+     , Salary Money
+    )
+ AS
+   BEGIN
+         INSERT  @EmployeeList 
+         SELECT *FROM Employee
+         WHERE ID = @ID
+      
+     RETURN
+   END
+ GO
+
+select * from myProc(2) 
+---------------------------------------------------The End---------------------------------------------------------
+create database a
+
+use a
+
+create table ab1(id int,name varchar(20))
+
+insert ab1 values(1,'A') 
+insert ab1 values(7,'G') 
+insert ab1 values(2,'B') 
+insert ab1 values(5,'E') 
+insert ab1 values(3,'C') 
+insert ab1 values(4,'D') 
+
+
+select * from ab1
+
+drop index ix on ab1
+
+
+create clustered index ix 
+on ab1(id)
+
+--for disable Clustered Index
+alter index ix 
+on ab1 disable
+
+--for enalble Clustered Index
+alter index ix 
+on ab1 rebuild
+
+delete ab1 where id=11
+
+--To store unique values in a column with indexing
+create unique clustered index ix 
+on ab1(id)
+
+--To create Non-clustered
+create nonclustered index ix 
+on ab1(id)
+
+create table ab
+(id int,
+name varchar(20),
+address varchar(20))
+
+insert into ab values(1,'xyz','j.p')
+insert into ab values(2,'a','v.p')
+insert into ab values(3,'b','u.n')
+insert into ab values(4,'yz','p.v')
+insert into ab values(5,'z','l.g')
+
+create table cd
+(id int,cfsv2 int,
+Semb int)
+
+insert into cd values(1,56,65)
+insert into cd values(2,66,65)
+insert into cd values(3,57,65)
+insert into cd values(4,56,65)
+insert into cd values(5,97,65)
+
+
+select * from ab
+select * from cd
+
+/*view is virtual table which is temporary in database it is a collection of rows and columns
+from more than one table.view does not have its own data,
+like:-if i have to execute join statement as many times we will make a view and in place of join statement we
+will execute view,executing view will execute automatically the query inside the view*/
+
+
+create view vw1
+as
+select a.id,a.name,a.address,c.cfsv2,c.semb
+from ab a join cd c
+on a.id=c.id
+
+--as select query will also execute 
+
+select * from vw1
+
+--view can not update data more than one table
+
+update vw1
+set id=6,cfsv2=89
+where name='a'--after execution it will generate error that modification of multiple table cannot possible
+
+--if we run sp_helptext procedure than it will show the query which is used in making view
+
+sp_helptext vw1
+
+--the correct query is,you can update tables only one by one
+
+update vw1
+set id=6
+where name='a'
+
+update vw1
+set cfsv2=89
+where name='a'
+
+
+--if there is some need of alteration than alter command is needed for altering a view
+
+alter view vw1
+with encryption--this statement encrypt the view statement as you cannot run sp_helptext store procedure and cannot view query
+--which is used in making this view
+as
+select a.id,a.name,a.address,c.cfsv2,c.semb
+from ab a join cd c
+on a.id=c.id
+where a.id>3--this query will alter a view named vw1 and stores data greater than 3
+
+sp_helptext vw1--when this statement is executed then you cannot view the query written in view statement
+--you should again alter the statement
+
+--how to drop a view
+drop view vw1
+
+--how to rename a view
+
+sp_rename vw1, newview
+-----------------------------------------------------------------------------------------
+--full text search is used to search a value with exact match or with matching words
+--use database and enable the full text search in database
+
+use a
+
+sp_fulltext_database enable
+
+--create a fulltext catalog,catalog is used as a container to store full-text indexes
+
+create fulltext catalog cat1 as default
+
+--craete a unique index
+
+create unique index ix on ab(name)
+
+--create a full-text index
+
+drop index ab.ix
+
+alter table ab
+alter column name varchar(20) not null
+
+create fulltext index on ab(name) key index ix
+
+
+
+--there are two methods of searching data one is freetext and second is contains
+
+--freetext searches data which matches with a word
+
+insert into ab values(13,'race win','janak puri')
+
+select name from ab where freetext (name,'race')
+
+--contains always return exact match of a search word
+
+select name from ab where contains(name,'race near winners')
+
+select * from ab
+

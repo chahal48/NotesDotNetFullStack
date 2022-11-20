@@ -1,0 +1,491 @@
+ADO.NET 
+ADO.NET Tutorial provides basic and advanced concepts of ADO.NET. Our ADO.NET Tutorial is designed for beginners and professionals both.
+ADO.NET is a module of .Net Framework which is used to establish connection between application and data sources. Data sources can be such as SQL Server and XML. ADO.NET consists of classes that can be used to connect, retrieve, insert and delete data.
+Our ADO.NET Tutorial includes all topics of ADO.NET Tutorial such as ADO Net Tutorial with introduction, data providers, sqlserver connectivity, connection, command, datareader, dataset, dataadapter, datatables, web form examples, mvc examples etc.
+ADO.NET Introduction
+It is a module of .Net Framework which is used to establish connection between application and data sources. Data sources can be such as SQL Server and XML. ADO.NET consists of classes that can be used to connect, retrieve, insert and delete data.
+All the ADO.NET classes are located into System.Data.dll and integrated with XML classes located into System.Xml.dll.
+ADO.NET has two main components that are used for accessing and manipulating data are the .NET Framework data provider and the DataSet.
+.NET Framework Data Providers
+These are the components that are designed for data manipulation and fast access to data. It provides various objects such as Connection, Command, DataReader and DataAdapter that are used to perform database operations. We will have a detailed discussion about Data Providers in new topic.
+SQlConnection , SqlCommanf
+The DataSet
+It is used to access data independently from any data resource. DataSet contains a collection of one or more DataTable objects of data. The following diagram shows the relationship between .NET Framework data provider and DataSet.
+ 
+Which one should we use DataReader or DataSet?
+We should consider the following points to use DataSet.
+o	It caches data locally at our application, so we can manipulate it.
+o	It interacts with data dynamically such as binding to windows forms control.
+o	It allows performing processing on data without an open connection. It means it can work while connection is disconnected.
+If we required some other functionality mentioned above, we can use DataReader to improve performance of our application.
+DataReader does not perform in disconnected mode. It requires DataReader object to be connected.
+ADO.NET Framework Data Providers
+Data provider is used to connect to the database, execute commands and retrieve the record. It is lightweight component with better performance. It also allows us to place the data into DataSet to use it further in our application.
+The .NET Framework provides the following data providers that we can use in our application.
+.NET Framework data provider	Description
+.NET Framework Data Provider for SQL Server	It provides data access for Microsoft SQL Server. It requires the System.Data.SqlClient namespace.
+.NET Framework Data Provider for OLE DB	It is used to connect with OLE DB. It requires the System.Data.OleDb namespace.
+.NET Framework Data Provider for ODBC	It is used to connect to data sources by using ODBC. It requires the System.Data.Odbc namespace.
+.NET Framework Data Provider for Oracle	It is used for Oracle data sources. It uses the System.Data.OracleClient namespace.
+EntityClient Provider	It provides data access for Entity Data Model applications. It requires the System.Data.EntityClient namespace.
+.NET Framework Data Provider for SQL Server Compact 4.0.	It provides data access for Microsoft SQL Server Compact 4.0. It requires the System.Data.SqlServerCe namespace.
+.NET Framework Data Providers Objects
+Following are the core object of Data Providers.
+Object	Description
+Connection	It is used to establish a connection to a specific data source.
+Command	It is used to execute queries to perform database operations.
+DataReader	It is used to read data from data source. The DbDataReader is a base class for all DataReader objects.
+DataAdapter	It populates a DataSet and resolves updates with the data source. The base class for all DataAdapter objects is the DbDataAdapter class.
+NET Framework Data Provider for SQL Server
+Data provider for SQL Server is a lightweight component. It provides better performance because it directly access SQL Server without any middle connectivity layer. In early versions, it interacts with ODBC layer before connecting to the SQL Server that created performance issues.
+The .NET Framework Data Provider for SQL Server classes is located in the System.Data.SqlClient namespace. We can include this namespace in our C# application by using the following syntax.
+1.	using System.Data.SqlClient;    
+This namespace contains the following important classes.
+Class	Description
+SqlConnection	It is used to create SQL Server connection. This class cannot be inherited.
+SqlCommand	It is used to execute database queries. This class cannot be inherited.
+SqlDataAdapter	It represents a set of data commands and a database connection that are used to fill the DataSet. This class cannot be inherited.
+SqlDataReader	It is used to read rows from a SQL Server database. This class cannot be inherited.
+SqlException	This class is used to throw SQL exceptions. It throws an exception when an error is occurred. This class cannot be inherited.
+
+using System;
+using System.Data.SqlClient;
+
+namespace ConsoleApp15
+{
+    internal class Program
+    {
+        public void Connection()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection("server=DESKTOP-E16TU3G;integrated security=true;initial catalog=erp");
+                con.Open();
+                Console.WriteLine("Create conn");
+            }
+            catch (Exception ex)
+            { 
+             Console.WriteLine(ex.Message);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Program program= new Program();
+            program.Connection();
+         //   Console.ReadLine();
+        }
+    }
+}
+_________
+
+Class - 3
+---------------
+using System;
+
+using System.Data;
+using System.Data.SqlClient;
+using System.Xml.Linq;
+using System.Windows.Forms;
+namespace ConsoleApp19
+{
+    internal class Program
+    {
+        string Name, query;
+        decimal Sal;
+        SqlCommand cmd;
+        SqlConnection con = new SqlConnection("server=DESKTOP-E16TU3G;integrated security=true;initial catalog=Erp");
+        void userinput()
+        {
+            Console.WriteLine("Enter The Name");
+            Name = Console.ReadLine();
+            Console.WriteLine("Enter The Sal");
+            Sal = Convert.ToDecimal(Console.ReadLine());
+        }
+        void join()
+        {
+            string query = "select * from Stock s inner join  stock a on a.id=s.id";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Console.WriteLine(dr[0] + "\t" + dr[1] + "\t" + dr[2] + "\t" + dr[3]);
+            }
+            con.Close();
+
+        }
+
+
+        void _searchLike()
+        {
+            Console.WriteLine("Enter The text");
+            Name = Console.ReadLine();
+            query = "select * from stock where Name like '%" + Name + "%' or Salary like '%" + Name + "%' or id like '%" + Name + "%'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Console.WriteLine(dr[0] + "\t" + dr[1] + "\t" + dr[2]);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No Record Found");
+            }
+            con.Close();
+        }
+
+
+        void Update()
+        {
+            userinput();
+            Console.WriteLine("Enter The Update user id");
+            int serachid=Convert.ToInt16(Console.ReadLine());
+             query = "update stock set name='"+Name+"',salary='"+Sal+"' where id='"+serachid+"'";
+             cmd = new SqlCommand(query,con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Console.WriteLine("Record is update");
+            MessageBox.Show("Data is Updated");
+        }
+
+
+
+        void _search()
+        {
+            Console.WriteLine("Enter The text");
+            Name = Console.ReadLine();
+            query = "select * from stock where Name='"+Name+"' ";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                Console.WriteLine(dr[0] + "\t" + dr[1] + "\t" + dr[2]);
+            }
+            else
+            {
+                Console.WriteLine("No Record Found");
+            }
+            con.Close();
+        }
+
+
+        void ChangePass()
+        {
+            Console.WriteLine("Enter The User Pass");
+            Name = Console.ReadLine();
+            Console.WriteLine("Enter The Update user id");
+            int serachid = Convert.ToInt16(Console.ReadLine());
+            query = "update stock set name='" + Name + "' where id='" + serachid + "'";
+            cmd = new SqlCommand(query, con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Console.WriteLine("Change Psss is update");
+
+        }
+        void _forget()
+        {
+            Console.WriteLine("Enter The Login User Name");
+            Name = Console.ReadLine();
+            query = "select Salary as 'Pass' from stock where name='" + Name + "'";
+            cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                Console.WriteLine("Your Current Pass is  ," + dr["Pass"]);
+            }
+            else
+            {
+                MessageBox.Show("Check ypur cred");
+            }
+            con.Close();
+
+        }
+        void Login()
+        {
+            Console.WriteLine("Enter The Login User Name");
+            Name = Console.ReadLine();
+            Console.WriteLine("Enter The login Pass");
+            Sal = Convert.ToDecimal(Console.ReadLine());
+            query = "select Name,Salary from stock where name='"+Name+"' and salary='"+Sal+"'";
+            cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dr=cmd.ExecuteReader();
+            if (dr.Read())
+            {  
+                Console.WriteLine("Welcome to My Page ," + dr["Name"]);
+            }
+            else
+            {
+                MessageBox.Show("Check ypur cred");
+            }
+            con.Close();
+        }
+        void Delete()
+        {
+            Console.WriteLine("Enter The  user id");
+            int serachid = Convert.ToInt16(Console.ReadLine());
+            query = "delete from stock where id='"+serachid+"'";
+            cmd = new SqlCommand(query,con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close(); MessageBox.Show("Data is Deleted");
+        }
+
+        public void Display()
+        {// window authmode 
+         // connect mode 
+            try
+            {
+                string query = "insert into stock(Name,Salary) values('Amit kr',2500)";
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery(); // run the app  f5
+                Console.WriteLine("Saved Record");
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        void _insert()
+        {
+            userinput();
+            string query = "insert into stock(name,salary)values('" + Name.Trim() + "','" + Convert.ToDecimal(Sal) + "')";
+            //string query = "insert into stock(name,salary)values('" + Name.Trim() + "','" + Sal + "')";
+            SqlCommand cmd = new SqlCommand(query, con);
+            //  SqlCommand cmd = new SqlCommand("insert into stock(name, salary)values('" + Name.Trim() + "', '" + Sal + "')", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Record is Inserted");
+            con.Close();
+        }
+
+        void DisplayAllUSer()
+        {
+            string query = "select * from stock";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Console.WriteLine(dr[0] + "\t" + dr[1] + "\t" + dr[2]);
+            }
+            con.Close();
+
+        }
+        void DisplayAllUSers()
+        {
+            string query = "select name as FirstName,id,salary from stock";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+             // Console.WriteLine(dr[0] + "\t" + dr[1] + "\t" + dr[2]);
+                Console.WriteLine(dr["Salary"] + "\t" + dr["id"] + "\t" + dr["FirstName"]);
+            }
+            con.Close();
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program._searchLike();
+         
+        }
+    }
+}
+-----
+class -4
+-------------
+[8:18 pm, 02/11/2022] Ducat Puneet Chandel: using System;
+
+using System.Data;
+using System.Data.SqlClient;
+using System.Xml.Linq;
+using System.Windows.Forms;
+using System.Collections.Generic;
+
+namespace ConsoleApp19
+{
+    internal class Program
+    {
+        string Name, query;
+        decimal Sal;
+        SqlDataAdapter adp;
+        DataTable dt = new DataTable();
+        SqlConnection con = new SqlConnection("server=DESKTOP-E16TU3G;integrated security=true;initial catalog=Erp");
+        void userinput()
+        {
+            Console.WriteLine("Enter The Name");
+            Name = Console.ReadLine();
+            Console.WriteLine("Enter The Sal");
+            Sal = Convert.ToDecimal(Console.ReadLine());
+        }
+        public void _DISInsert()
+        {
+            userinput();
+            query = "Insert into stock(NAme,salary)values('" + Name + "','" + Sal + "')";
+            adp = new SqlDataAdapter(query,con);
+            adp.Fill(dt);
+            Console.WriteLine("Inserted");
+        }
+        public void Dis_insert()
+        {
+            userinput();
+            query = "Insert into stock(NAme,salary)values('" + Name + "','" + Sal + "')";
+            SqlCommand cmd = new SqlCommand(query, con);
+          // con.Open();            
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(dt);
+            Console.WriteLine("Inserted");
+        }
+        public void _DISDelete()
+        {
+            Console.WriteLine("Enter the Delete Id");
+            int search=Convert.ToInt16(Console.ReadLine());        
+            query = "Delete from stock where id='"+search+"'";           
+            adp = new SqlDataAdapter(query, con);
+            adp.Fill(dt); 
+            Console.WriteLine("Delete");
+            con.Close();
+        }
+
+        public void _insert_sp()
+        {
+            userinput();
+            query = "_insert";
+            SqlCommand cmd = new SqlCommand(query,con);
+            cmd.CommandType=CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@salary", Convert.ToDecimal(Sal));
+            cmd.Parameters.AddWithValue("@name", Name);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Intes");
+            con.Close();
+
+        }
+        public void _update_sp()
+        {
+            userinput();
+            Console.WriteLine("Enter id");
+            int se = Convert.ToInt32(Console.ReadLine());
+            query = "_update";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@salary", Convert.ToDecimal(Sal));
+            cmd.Parameters.AddWithValue("@name", Name);
+            cmd.Parameters.AddWithValue("@id", se);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Update");
+            con.Close();
+
+        }
+
+        public void _login_sp()
+                           {
+            userinput();
+            query = "_login";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@salary", Convert.ToDecimal(Sal));
+            cmd.Parameters.AddWithValue("@name", Name);
+            con.Open();
+            int i=(Int32)cmd.ExecuteScalar();
+            if (i!=1)
+            {
+                Console.WriteLine("try");
+              //  Console.WriteLine("Welcome");
+            }
+            else
+            {
+              Console.WriteLine("Welcome");
+              //  Console.WriteLine("try");
+            }
+            con.Close();
+
+        }
+        public void create_Dub()
+        {
+            // dublicate
+            userinput();
+            query = "select * from stock where name='"+Name+"'";
+            adp = new SqlDataAdapter(query,con);
+            adp.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                Console.WriteLine("name is Dublicate");
+            }
+            else
+            {
+                query = "Insert into stock(NAme,salary)values('" + Name + "','" + Sal + "')";
+                SqlCommand cmd = new SqlCommand(query, con);
+                 con.Open();
+                //  adp = new SqlDataAdapter(cmd);
+                // adp.Fill(dt);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Console.WriteLine("Inserted");
+            }
+
+
+
+        }
+
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program._login_sp();
+            Console.ReadLine();
+        }
+    }
+}
+
+
+//select* from stock
+//create proc _insert
+//@name nvarchar(100),
+//@Salary decimal(18, 2)
+//as
+//begin
+//insert into stock(Name, Salary) values(@Name, @Salary)
+//end
+//exec _insert 122,'Anil'
+
+//create proc _update
+//@name nvarchar(100),
+//@Salary decimal(18, 2),
+//@id int
+//as
+//begin
+//update stock set  name=@name, Salary = @Salary where id=@id
+//end
+ 
+//create proc _login
+//@name nvarchar(100),
+//@Salary decimal(18, 2)
+//as
+//begin
+//select count(*) from stock where name = @name and Salary = @Salary
+//end
+//exec _login 'Anil',1222
+
+//select sum(salary) from stock  where name = 'Anil' or Salary = 456
+//select count(name) from stock  where name = 'Anil' and Salary = 1212
+[8:23 pm, 02/11/2022] Ducat Puneet Chandel: a disconnected mode of operation is one in which ADO.Net retrieves data from the underlying database, stores the data retrieved temporarily in the memory, and then closes the connection to the database.
+
+The architecture of ADO.net, in which connection must be opened to access the data retrieved from database is called as connected architecture. Connected architecture was built on the classes connection, command, datareader and transaction

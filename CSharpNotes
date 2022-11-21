@@ -282,6 +282,7 @@ class Program
       
         int RollNo = 21;
         int Fee = 2200;
+	// String interpolation
         Console.WriteLine($"Fee amt is{Fee}  and Roll is {RollNo}");
 
         Console.WriteLine(String.Format($"Fee {Fee} Roll {RollNo}"));
@@ -4332,6 +4333,7 @@ namespace IO
             {
 
                 //FileStream fs = new FileStream("E:\\Demo\\Abc.txt");
+		// Verbatim string literals
                  fs = new FileStream(@"E:\Demo\Abc.txt", FileMode.Open, FileAccess.Read);
                  sr = new StreamReader(fs);
                 sr.BaseStream.Seek(1, SeekOrigin.Begin);
